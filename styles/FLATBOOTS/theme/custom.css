@@ -1,0 +1,846 @@
+/*****************************************************************
+* Custom CSS Stylesheet. You can add any custom CSS selectors here after the comment line 
+* They will be given the highest priority on any elements on the forum
+* Customize your forum color scheme in one click: www.sitesplat.com/phpBB3/ 
+* **************************************************************
+*
+* FLATBOOTS @SiteSplat.com - Custom CSS STYLESHEET - 
+* 
+* **************************************************************
+*****************************************************************/
+/* ===[ CSS HOOK TOP ]=== */
+ 
+
+/* ===[ CSS HOOK BOTTOM ]=== */
+body .new-customize-wellnessherbs {
+  font-family: "Poppins", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #222;
+  padding: 0px;
+  margin: 0px;
+  font-weight: normal;
+  letter-spacing: 0.5px;
+  line-height: 20px;
+}
+
+@font-face {
+  font-family: icomoon;
+  src: url(./fonts/iconmoon/icomoon.svg?gzj9ot#icomoon) format('svg'), url(./font/iconmoon/icomoon.ttf?gzj9ot) format('truetype'), url(./font/iconmoon/icomoon.woff?gzj9ot) format('woff');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal,
+}
+
+.new-customize-wellnessherbs .footer-logo {
+  display: block;
+  width: 180px;
+  margin: -2px auto 20px;
+}
+
+.new-customize-wellnessherbs.footer-block {
+  padding: 50px 0 25px;
+  background: #f7f7f7;
+}
+
+.new-customize-wellnessherbs .img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.new-customize-wellnessherbs .footer-about-info {
+  width: 300px;
+  margin: 0 auto;
+  max-width: 100%;
+  text-align: center;
+}
+
+.new-customize-wellnessherbs .social-link {
+  margin-top: 30px;
+}
+
+.new-customize-wellnessherbs .social-link .social-list {
+  margin: 0;
+  text-align: center;
+}
+
+.new-customize-wellnessherbs .list-inline {
+  padding-left: 0;
+  margin-left: -5px;
+  list-style: none;
+}
+
+.new-customize-wellnessherbs .social-link .social-list li {
+  padding: 0;
+}
+
+.new-customize-wellnessherbs .list-inline>li {
+  display: inline-block;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+.new-customize-wellnessherbs .social-link .social-list li+li {
+  margin-left: 10px;
+}
+.new-customize-wellnessherbs .social-list.list-inline li a {
+  background: #fff;
+  color: #222;
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  width: 30px;
+  border-radius: 5px;
+  -webkit-transition: all 0.6s;
+  -o-transition: all 0.6s;
+  transition: all 0.6s;
+}
+
+.new-customize-wellnessherbs.footer-block .footer-list {
+  color: #777;
+}
+
+.new-customize-wellnessherbs .ftr-list-hdr {
+  text-transform: uppercase;
+  font-size: 16px;
+  margin: 0 0 18px;
+  position: relative;
+  font-weight: 500;
+  color: #222;
+  padding: 0 0 14px;
+  border-bottom: none;
+}
+
+.new-customize-wellnessherbs .footer-list-dropdown {
+  display: none;
+}
+
+.new-customize-wellnessherbs .ftr-list-hdr:after {
+  content: "";
+  width: 50px;
+  height: 2px;
+  background: #28720a;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.new-customize-wellnessherbs .list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+.new-customize-wellnessherbs ol,
+.new-customize-wellnessherbs ul {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.new-customize-wellnessherbs .footer-links li a {
+  padding: 8px 0;
+  display: inline-block;
+  color: #777;
+  text-decoration: none;
+}
+
+.new-customize-wellnessherbs .copyright {
+  padding-top: 25px;
+  margin-top: 45px;
+  border-top: 2px solid #e5e5e5;
+  color: #777;
+}
+
+.new-customize-wellnessherbs .footer-bottom {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.new-customize-wellnessherbs .copyright-inner {
+  text-align: center;
+}
+
+.new-customize-wellnessherbs .footer-btm-hdr-text {
+  color: #222;
+  font-size: 12px;
+  margin: 0 0 10px 0;
+}
+
+.new-customize-wellnessherbs .copyright-text {
+  margin: 0;
+}
+
+.new-customize-wellnessherbs .payment-list {
+  margin: 20px 0 0;
+  text-align: center;
+}
+
+.new-customize-wellnessherbs .store-logo {
+  text-align: left;
+}
+
+.new-customize-wellnessherbs .store-logo img {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+}
+
+.new-customize-wellnessherbs .payment-list a {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.new-customize-wellnessherbs a:focus,
+.new-customize-wellnessherbs a:hover {
+  color: #222;
+}
+
+.new-customize-wellnessherbs a:focus,
+.new-customize-wellnessherbs a:hover {
+  text-decoration: none;
+}
+
+.new-customize-wellnessherbs .copyright a {
+  color: #222;
+}
+
+.new-customize-wellnessherbs .footer-bottom a {
+  color: #28720a;
+  text-decoration: underline;
+}
+
+/* .collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active,
+.collapsible:hover {
+  background-color: #555;
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+} */
+
+.new-customize-wellnessherbs .customer-service {
+  max-height: initial;
+  overflow: initial;
+  transition: max-height 0.2s ease-out;
+}
+
+@media only screen and (max-width: 767px) {
+  .new-customize-wellnessherbs .footer-list-dropdown {
+    display: block;
+    width: 35px;
+    height: 35px;
+    line-height: 36px;
+    font-size: 15px;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #fff;
+    background: #28720a;
+  }
+
+  .new-customize-wellnessherbs .customer-service {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+
+  .new-customize-wellnessherbs .ftr-list-hdr {
+    font-size: 14px;
+    text-align: left;
+    cursor: pointer;
+    background: #eee;
+    padding: 10px;
+  }
+
+  .new-customize-wellnessherbs .ftr-list-hdr:after {
+    display: none
+  }
+
+  .new-customize-wellnessherbs .social-link {
+    margin-bottom: 30px;
+  }
+
+  .new-customize-wellnessherbs .navbar-nav>li {
+    float: left;
+  }
+
+  .new-customize-wellnessherbs .mobile-flex.row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  .new-customize-wellnessherbs .mobile-search {
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+  }
+
+  .new-customize-wellnessherbs .pull-left {
+    margin-left: 16px;
+  }
+
+  .new-customize-wellnessherbs .logo-part-nav-right .search-block .top-header-nav {
+    margin-top: 5px;
+  }
+
+  .new-customize-wellnessherbs .logo-part-nav-right .top-header-nav ul.nav li span i {
+    font-size: 24px;
+  }
+
+  .new-customize-wellnessherbs img {
+    width: 150px;
+  }
+
+  .new-customize-wellnessherbs .header-bottom-part .search-box:not(input),
+  .new-customize-wellnessherbs .header-bottom-part .search-block {
+    margin-top: 10px;
+  }
+  
+  .new-customize-wellnessherbs .logo-part-nav-right .search-block {
+    margin-top: 20px;
+  }
+
+  .new-customize-wellnessherbs #search {
+    margin-top: 10px;
+  }
+
+  .new-customize-wellnessherbs .top-header-nav i {
+    font-size: 18px;
+  }
+
+  .new-customize-wellnessherbs .tele-mobile {
+    margin-top: 20px;
+  }
+
+  .new-customize-wellnessherbs .cart-block .basket-icon {
+    width: 39px !important;
+    height: 39px !important;
+  }
+
+  .new-customize-wellnessherbs .cart-block .basket-icon i {
+    font-size: 33px !important;
+  }
+
+  .hidden-xs {
+    display: none !important;
+  }
+}
+
+/* --- header --- */
+.new-customize-wellnessherbs .header-top {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  height: 50px;
+  -webkit-box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+  box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+}
+
+.new-customize-wellnessherbs .header-top .navbar {
+  margin-bottom: 0;
+}
+
+.new-customize-wellnessherbs .top-header-nav {
+  margin-top: 6px;
+}
+
+.new-customize-wellnessherbs .top-header-nav ul.nav {
+  margin: 0;
+}
+
+.new-customize-wellnessherbs .top-header-nav ul.nav li a {
+  color: #222;
+  font-size: 13px;
+  position: relative;
+}
+
+.new-customize-wellnessherbs .top-header-nav a:hover i {
+  color: #28720a;
+}
+
+.new-customize-wellnessherbs .top-header-nav ul.nav.header-social-icon li a:hover:after {
+  display: none;
+}
+
+.new-customize-wellnessherbs .top-header-nav ul.nav.header-social-icon li a:hover i.fa-twitter {
+  color: #1da1f2;
+}
+
+.new-customize-wellnessherbs .nav>li>a {
+  padding: 10px 7px;
+}
+
+.new-customize-wellnessherbs .top-header-nav ul.nav li span {
+  padding-right: 5px;
+  vertical-align: bottom;
+  width: 20px;
+}
+
+.new-customize-wellnessherbs .top-header-nav i {
+  color: #222;
+  font-size: 14px;
+}
+
+.new-customize-wellnessherbs .icon {
+  font-family: icomoon !important;
+  speak: none;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.new-customize-wellnessherbs .icon-home3:before {
+  content: "\eb69";
+}
+
+.new-customize-wellnessherbs .top-header-nav ul.nav li a::after {
+  background: #28720a;
+  bottom: 4px;
+  content: "";
+  height: 2px;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  max-width: 76%;
+  width: 0px;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.new-customize-wellnessherbs .header-top-left-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 43px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.new-customize-wellnessherbs .header-top-left-block i {
+  font-size: 20px;
+  vertical-align: sub;
+}
+
+.new-customize-wellnessherbs .svg-icon-support {
+  background: url(https://www.wellnessherbs.com/catalog/view/theme/howashafi/stylesheet/img/Consultation.svg) no-repeat center;
+  height: 24px;
+  width: 24px;
+}
+
+.new-customize-wellnessherbs span.ani {
+  margin: 0 0 0 15px;
+  background: url(https://www.wellnessherbs.com/catalog/view/theme/howashafi/stylesheet/img/bg.png) repeat-y;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: actop 80s linear infinite;
+  animation: actop 80s linear infinite;
+  color: #222;
+}
+
+.new-customize-wellnessherbs .ani {
+  overflow: hidden;
+}
+
+@keyframes actop {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+@-webkit-keyframes actop {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+@-moz-keyframes actop {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+@-o-keyframes actop {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+@-ms-keyframes actop {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.new-customize-wellnessherbs .nav>li {
+  position: relative;
+  display: block;
+}
+
+.new-customize-wellnessherbs .header-social-icon li a i {
+  font-size: 14px;
+}
+
+.new-customize-wellnessherbs .header-bottom-part {
+  margin: 20px 0;
+}
+
+.new-customize-wellnessherbs .right-padding {
+  padding-right: 0;
+}
+
+.new-customize-wellnessherbs .logo-box a {
+  display: block;
+}
+
+.new-customize-wellnessherbs .logo-box img {
+  width: 200px;
+  max-width: 100%;
+  height: auto;
+}
+
+.new-customize-wellnessherbs .header-bottom-part .search-box:not(input),
+.new-customize-wellnessherbs .header-bottom-part .search-block {
+  margin-top: 25px;
+}
+
+.new-customize-wellnessherbs #search {
+  margin-bottom: 10px;
+}
+
+.new-customize-wellnessherbs #search {
+  margin-bottom: 0px;
+  width: 100%;
+  -webkit-box-shadow: 0px 3px 10px 0 rgb(0 0 0 / 15%);
+  box-shadow: 0px 3px 10px 0 rgb(0 0 0 / 15%);
+  border-radius: 25px;
+  border: 2px solid #222;
+}
+
+.new-customize-wellnessherbs #search input {
+  border-radius: 0;
+  border-radius: 25px 0 0 25px;
+  height: 45px;
+}
+
+.new-customize-wellnessherbs input.search-box {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  border: 1px solid #2a730a;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  padding-right: 40px !important;
+}
+
+.new-customize-wellnessherbs #search .input-group-btn {
+  background: #222;
+  border-radius: 0 25px 25px 0;
+}
+
+.new-customize-wellnessherbs .btn-search-click {
+  background: none;
+  border: none;
+  font-size: 13px;
+  cursor: pointer;
+  z-index: 9;
+  color: #fff;
+  padding: 2px 15px 0;
+  letter-spacing: 1px;
+}
+
+.new-customize-wellnessherbs .btn-search-click .fa {
+  margin-right: 5px;
+}
+
+.new-customize-wellnessherbs .left-padding {
+  padding-left: 0;
+}
+
+.new-customize-wellnessherbs .search-block .top-header-nav {
+  margin-top: 0;
+}
+
+.new-customize-wellnessherbs .logo-part-nav-right .top-header-nav ul.nav li a {
+  padding: 0 7px !important;
+}
+
+.new-customize-wellnessherbs .logo-part-nav-right .top-header-nav ul.nav li span {
+  display: block;
+  width: auto;
+  padding: 0;
+  text-align: center;
+}
+
+.new-customize-wellnessherbs .logo-part-nav-right .top-header-nav ul.nav li span i.svg-icon-login {
+  background: url(https://www.wellnessherbs.com/catalog/view/theme/howashafi/stylesheet/img/Login-Green.svg) no-repeat center;
+}
+
+.new-customize-wellnessherbs .logo-part-nav-right .top-header-nav ul.nav li span i.svg-icon-register {
+  background: url(https://www.wellnessherbs.com/catalog/view/theme/howashafi/stylesheet/img/Register-Green.svg) no-repeat center;
+}
+
+.new-customize-wellnessherbs .logo-part-nav-right .top-header-nav ul.nav li span i.svg-icon-wishlist {
+  background: url(https://www.wellnessherbs.com/catalog/view/theme/howashafi/stylesheet/img/Favorite-Green.svg) no-repeat center;
+}
+
+.new-customize-wellnessherbs .logo-part-nav-right .top-header-nav ul.nav li span .icon-noun_question_help_629634_000000 {
+  background: url(https://www.wellnessherbs.com/catalog/view/theme/howashafi/stylesheet/img/FAQ.svg) no-repeat center;
+}
+
+.new-customize-wellnessherbs .logo-part-nav-right .top-header-nav ul.nav li span i.svg-icon-affiliate {
+  background: url(https://www.wellnessherbs.com/catalog/view/theme/howashafi/stylesheet/img/Affiliates-Green.svg) no-repeat center;
+}
+
+.new-customize-wellnessherbs .logo-part-nav-right .top-header-nav ul.nav li span i {
+  font-size: 28px;
+  color: #28720a;
+  display: inline-block;
+  height: 26px;
+  width: 26px;
+}
+
+.new-customize-wellnessherbs .logo-part-nav-right .top-header-nav ul.nav li span.header-text {
+  font-size: 11px;
+}
+
+.new-customize-wellnessherbs .cart-block .basket-icon {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.new-customize-wellnessherbs .cart-block .basket-icon i {
+  font-size: 45px;
+  color: #ce0b0b;
+}
+
+.new-customize-wellnessherbs #cart-total {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  padding: 2px 6px;
+  background: #28720a;
+  border-radius: 20px;
+  color: #fff;
+  -webkit-animation: shadow-pulse 1s infinite;
+  animation: shadow-pulse 1s infinite;
+}
+
+.new-customize-wellnessherbs #cart .dropdown-menu {
+  font-family: 'Poppins', sans-serif;
+  width: 440px;
+  overflow-y: auto;
+  border-radius: 0;
+  -webkit-box-shadow: 0 0 10px 0 rgb(0 0 0 / 15%);
+  box-shadow: 0 0 10px 0 rgb(0 0 0 / 15%);
+  border: 1px solid #e8e8e8;
+  padding: 10px;
+}
+
+.new-customize-wellnessherbs #cart .dropdown-menu {
+  background: #fff !important;
+}
+
+.new-customize-wellnessherbs #cart .dropdown-menu {
+  min-width: 100%;
+}
+
+.new-customize-wellnessherbs #cart .dropdown-menu {
+  background-color: #eee;
+  z-index: 1001;
+}
+
+.new-customize-wellnessherbs #cart .dropdown-menu li p {
+  margin: 20px 0;
+}
+
+.new-customize-wellnessherbs .navbar {
+  position: relative;
+  min-height: 50px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  padding: 0;
+}
+
+.new-customize-wellnessherbs .icon-log-out:before {
+  content: "\eb78";
+}
+
+.new-customize-wellnessherbs .logout-style {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* gap: 6px; */
+  justify-content: space-between;
+}
+
+.new-customize-wellnessherbs .logout-style i {
+  align-items: self-end;
+  display: flex;
+}
+
+.new-customize-wellnessherbs #topicreview h3,
+.new-customize-wellnessherbs .section-mcp h3,
+.new-customize-wellnessherbs .section-posting h3,
+.new-customize-wellnessherbs .section-ucp h3 {
+  font-size: 20px;
+  border-bottom: none;
+}
+
+.new-customize-wellnessherbs .logo-part-nav-right .top-header-nav ul.nav li a:hover span i {
+  color: #ce0b0b;
+}
+
+.new-customize-wellnessherbs .logo-part-nav-right .top-header-nav ul.nav li a:hover {
+  background: none;
+}
+
+.new-customize-wellnessherbs .logo-part-nav-right .top-header-nav ul.nav li a:hover span.header-text {
+  color: #ce0b0b;
+}
+
+.new-customize-wellnessherbs .logo-part-nav-right .top-header-nav ul.nav li:hover span i.svg-icon-login {
+  background: url(https://www.wellnessherbs.com/catalog/view/theme/howashafi/stylesheet/img/Login-Red.svg) no-repeat center;
+}
+
+.new-customize-wellnessherbs .logo-part-nav-right .top-header-nav ul.nav li:hover span i.svg-icon-register {
+  background: url(https://www.wellnessherbs.com/catalog/view/theme/howashafi/stylesheet/img/Register-Red.svg) no-repeat center;
+}
+
+.new-customize-wellnessherbs .logo-part-nav-right .top-header-nav ul.nav li:hover span i.svg-icon-wishlist {
+  background: url(https://www.wellnessherbs.com/catalog/view/theme/howashafi/stylesheet/img/Favorite-Red.svg) no-repeat center;
+}
+
+.new-customize-wellnessherbs .logo-part-nav-right .top-header-nav ul.nav li:hover span .icon-noun_question_help_629634_000000 {
+  background: url(https://www.wellnessherbs.com/catalog/view/theme/howashafi/stylesheet/img/FAQ-Red.svg) no-repeat center;
+}
+
+.new-customize-wellnessherbs .logo-part-nav-right .top-header-nav ul.nav li:hover span i.svg-icon-affiliate {
+  background: url(https://www.wellnessherbs.com/catalog/view/theme/howashafi/stylesheet/img/Affiliates-Red.svg) no-repeat center;
+}
+
+.new-customize-wellnessherbs .top-header-nav ul.nav.header-icon-margin li a:hover:after {
+  width: 76%;
+}
+
+.new-customize-wellnessherbs span.ani {
+  margin: 0 0 0 15px;
+  background: url(https://www.wellnessherbs.com/catalog/view/theme/howashafi/stylesheet/img/bg.png) repeat-y;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: actop 80s linear infinite;
+  animation: actop 80s linear infinite;
+  color: #222222;
+}
+
+@media screen and (max-width: 600px) {
+  .right-top-panel .header-social-icon {
+    display: none;
+  }
+}
+
+.icon-iconmonstr-award-23-badge:before {
+  content: "\e97e";
+}
+
+.icon-home3:before {
+  content: "\eb69";
+}
+
+.icon-mail:before {
+  content: "\eb79";
+}
+
+.icon-log-out:before {
+  content: "\eb78";
+}
+
+.icon-dashboard:before {
+  content: "\e871";
+}
+
+.new-customize-wellnessherbs .logo-part-nav-right .top-header-nav .header-icon-dropdown-menu {
+  box-shadow: 1px 1px 6px 1px #555;
+  padding: 5px 1px 0 1px;
+  margin: 0;
+}
+
+.new-customize-wellnessherbs .logo-part-nav-right .top-header-nav .header-icon-dropdown-menu a {
+  width: fit-content;
+}
+
+.new-customize-wellnessherbs .logo-part-nav-right .top-header-nav .header-icon-dropdown-menu li {
+  padding: 8px;
+}
+
+.new-customize-wellnessherbs .logo-part-nav-right .top-header-nav .header-icon-dropdown-menu .btn-info.active,
+.new-customize-wellnessherbs .logo-part-nav-right .top-header-nav .header-icon-dropdown-menu .btn-info:active,
+.new-customize-wellnessherbs .logo-part-nav-right .top-header-nav .header-icon-dropdown-menu .btn-info:hover,
+.new-customize-wellnessherbs .logo-part-nav-right .top-header-nav .header-icon-dropdown-menu .open>.dropdown-toggle.btn-info {
+  color: #fff;
+  background-color: #31b0d5;
+  border-color: #269abc;
+}
+
+.new-customize-wellnessherbs .logo-part-nav-right .top-header-nav .header-icon-dropdown-menu .btn-warning.active,
+.new-customize-wellnessherbs .logo-part-nav-right .top-header-nav .header-icon-dropdown-menu .btn-warning:active,
+.new-customize-wellnessherbs .logo-part-nav-right .top-header-nav .header-icon-dropdown-menu .btn-warning:hover,
+.new-customize-wellnessherbs .logo-part-nav-right .top-header-nav .header-icon-dropdown-menu .open>.dropdown-toggle.btn-warning {
+  color: #fff;
+  background-color: #ec971f;
+  border-color: #d58512;
+}
