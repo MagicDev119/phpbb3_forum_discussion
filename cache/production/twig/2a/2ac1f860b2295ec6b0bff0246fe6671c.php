@@ -37,34 +37,43 @@ class __TwigTemplate_0d9daa4eea1eac2f9da7b9c50378e04a extends \Twig\Template
         echo "<div class=\"flat-header\">
 <div class=\"masthead\"></div>
     <div class=\"wrapper-head\">
-\t <div class=\"container\">
-\t \t";
-        // line 5
+\t \t\t<div class=\"container\">
+\t\t\t\t<div class=\"col-md-6\">
+\t\t\t\t\t";
+        // line 6
         if (((($context["TEASER_TITLE"] ?? null) != "") || (($context["TEASER_TEXT"] ?? null) != ""))) {
-            // line 6
-            echo "\t \t\t<h1>";
+            // line 7
+            echo "\t\t\t\t\t<h1>";
             echo ($context["TEASER_TITLE"] ?? null);
             echo "</h1>
-       \t\t<p>";
-            // line 7
+\t\t\t\t\t<p>";
+            // line 8
             echo ($context["TEASER_TEXT"] ?? null);
             echo "</p>
-\t \t";
+\t\t\t\t\t";
         } else {
-            // line 9
-            echo "\t\t\t<h1>";
+            // line 10
+            echo "\t\t\t\t\t<h1>";
             echo $this->extensions['phpbb\template\twig\extension']->lang("FLATBOOTS_INTRO");
             echo "&nbsp;<a class=\"label label-call\" href=\"https://getbootstrap.com/\">";
             echo $this->extensions['phpbb\template\twig\extension']->lang("BOOTSTRAP_VERSION");
             echo "</a></h1>
-\t\t\t<p>";
-            // line 10
+\t\t\t\t\t<p>";
+            // line 11
             echo $this->extensions['phpbb\template\twig\extension']->lang("FLATBOOTS_EXPLAIN");
             echo "</p>
-        ";
+\t\t\t\t\t";
         }
-        // line 12
-        echo "     </div>
+        // line 13
+        echo "\t\t\t\t</div>
+\t\t\t\t<div class=\"col-md-6\">
+\t\t\t\t\t<img src=\"";
+        // line 15
+        echo ($context["ROOT_PATH"] ?? null);
+        echo "images/banner.jpg\"
+\t\t\t\t\t\talt=\"Heavenly Herbals | Organic Herbal Supplements for Complete Wellness\" style=\"width: 100%;\">
+\t\t\t\t</div>
+    \t</div>
 \t</div>
 </div>";
     }
@@ -81,7 +90,7 @@ class __TwigTemplate_0d9daa4eea1eac2f9da7b9c50378e04a extends \Twig\Template
 
     public function getDebugInfo()
     {
-        return array (  67 => 12,  62 => 10,  55 => 9,  50 => 7,  45 => 6,  43 => 5,  37 => 1,);
+        return array (  72 => 15,  68 => 13,  63 => 11,  56 => 10,  51 => 8,  46 => 7,  44 => 6,  37 => 1,);
     }
 
     public function getSourceContext()

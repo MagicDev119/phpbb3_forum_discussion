@@ -1,14 +1,20 @@
 <div class="flat-header">
 <div class="masthead"></div>
     <div class="wrapper-head">
-	 <div class="container">
-	 	<!-- IF TEASER_TITLE neq '' or TEASER_TEXT neq '' -->
-	 		<h1>{TEASER_TITLE}</h1>
-       		<p>{TEASER_TEXT}</p>
-	 	<!-- ELSE -->
-			<h1>{L_FLATBOOTS_INTRO}&nbsp;<a class="label label-call" href="https://getbootstrap.com/">{L_BOOTSTRAP_VERSION}</a></h1>
-			<p>{L_FLATBOOTS_EXPLAIN}</p>
-        <!-- ENDIF -->
-     </div>
+	 		<div class="container">
+				<div class="col-md-6">
+					<!-- IF TEASER_TITLE neq '' or TEASER_TEXT neq '' -->
+					<h1>{TEASER_TITLE}</h1>
+					<p>{TEASER_TEXT}</p>
+					<!-- ELSE -->
+					<h1>{L_FLATBOOTS_INTRO}&nbsp;<a class="label label-call" href="https://getbootstrap.com/">{L_BOOTSTRAP_VERSION}</a></h1>
+					<p>{L_FLATBOOTS_EXPLAIN}</p>
+					<!-- ENDIF -->
+				</div>
+				<div class="col-md-6">
+					<img src="{ROOT_PATH}images/banner.jpg"
+						alt="Heavenly Herbals | Organic Herbal Supplements for Complete Wellness" style="width: 100%;">
+				</div>
+    	</div>
 	</div>
 </div>

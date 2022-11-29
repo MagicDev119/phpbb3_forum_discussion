@@ -39,7 +39,7 @@ body .new-customize-wellnessherbs {
 
 .new-customize-wellnessherbs.footer-block {
   padding: 50px 0 25px;
-  background: #f7f7f7;
+  /* background: #f7f7f7; */
 }
 
 .new-customize-wellnessherbs .img-responsive {
@@ -170,8 +170,8 @@ body .new-customize-wellnessherbs {
 }
 
 .new-customize-wellnessherbs .payment-list {
-  margin: 20px 0 0;
-  text-align: center;
+  margin: 20px -5px 0;
+  /* text-align: center; */
 }
 
 .new-customize-wellnessherbs .store-logo {
@@ -243,6 +243,14 @@ body .new-customize-wellnessherbs {
   transition: max-height 0.2s ease-out;
 }
 
+.mobile-visible {
+  display: none;
+}
+
+.mobile-disable {
+  display: block;
+}
+
 @media only screen and (max-width: 767px) {
   .new-customize-wellnessherbs .footer-list-dropdown {
     display: block;
@@ -256,6 +264,14 @@ body .new-customize-wellnessherbs {
     right: 0;
     color: #fff;
     background: #28720a;
+  }
+
+  .mobile-visible {
+    display: block;
+  }
+  
+  .mobile-disable {
+    display: none;
   }
 
   .new-customize-wellnessherbs .customer-service {
@@ -312,6 +328,10 @@ body .new-customize-wellnessherbs {
 
   .new-customize-wellnessherbs img {
     width: 150px;
+  }
+
+  .new-customize-wellnessherbs .mobile-visible img {
+    width: auto;
   }
 
   .new-customize-wellnessherbs .header-bottom-part .search-box:not(input),
@@ -387,7 +407,7 @@ body .new-customize-wellnessherbs {
   color: #1da1f2;
 }
 
-.new-customize-wellnessherbs .nav>li>a {
+.new-customize-wellnessherbs .nav > li > a {
   padding: 10px 7px;
 }
 
@@ -843,4 +863,261 @@ body .new-customize-wellnessherbs {
   color: #fff;
   background-color: #ec971f;
   border-color: #d58512;
+}
+
+/* color schema */
+.footer-links li a:hover {
+  color: #28720a;
+}
+
+a:focus,
+a:hover {
+  color: #222222;
+}
+
+.new-customize-wellnessherbs .footer-bottom a:focus,
+.new-customize-wellnessherbs .footer-bottom a:hover {
+  color: #222222;
+}
+
+.footer-block {
+  background: #f7f7f7;
+}
+/* todo */
+.menu-box {
+  background: #f1f1f1;
+}
+
+body {
+  color: #222222;
+  background-color: #FFFFFF;
+}
+
+.nav > li > a:focus,
+.nav > li > a:hover {
+  text-decoration: none;
+  background-color: transparent;
+}
+
+.top-header-nav ul.nav.header-social-icon li a:hover i.fa-facebook {
+  color: #4267b2;
+}
+
+.top-header-nav ul.nav.header-social-icon li a:hover i.fa-twitter {
+  color: #1da1f2;
+}
+
+.top-header-nav ul.nav.header-social-icon li a:hover i.fa-linkedin {
+  color: #0077b5;
+}
+
+.top-header-nav ul.nav.header-social-icon li a:hover i.fa-instagram {
+  color: #ff8544;
+}
+
+.top-header-nav ul.nav.header-social-icon li a:hover i.fa-youtube {
+  color: #ff0000;
+}
+
+.top-header-nav ul.nav.header-social-icon li a:hover i.fa-pinterest {
+  color: #cb2027;
+}
+
+.section-page {
+  background-color: #f3f3f3;
+}
+
+.table > thead > tr > th {
+  background: #f7f7f7;
+  color: #222222;
+}
+
+.page-breadcrumb {
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.breadcrumb.page-breadcrumb-list {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+}
+
+.forum-mods > strong,
+.subforums > strong,
+.breadcrumb-line a:link,
+.breadcrumb-line a:visited {
+  color: #747474;
+}
+
+.breadcrumb li:last-child a {
+  font-weight: 700;
+  color: #222222;
+}
+
+.panel-forum>.panel-heading {
+  background-color: #5ab218;
+}
+
+.masthead:before {
+  background: url(./images/tile-bg-head.png) 0 0 #5ab218;
+}
+
+.panel-post .panel-bottom {
+  background-color: #28720a;
+}
+
+.btn-default {
+  border: 0;
+  border-color: #28720a;
+  color: #fff;
+  background-color:#28720a;
+}
+
+.btn-default:visited,
+.btn-link:visited,
+.btn-default:link,
+.btn-link:link {
+  color: #fff;
+}
+
+.btn-default.active,
+.btn-default:active,
+.btn-default:focus,
+.btn-default:hover,
+.open .dropdown-toggle.btn-default {
+  color: #fff;
+  border-color: #222;
+  background-color: #222;
+  /* border-color: #4A960D;
+  background-color: #4A960D; */
+}
+
+.btn-link:focus,
+.btn-link:hover {
+  color: #FFFFFF;
+}
+
+a.forumtitle,
+a.topictitle {
+  color: #222;
+}
+
+a,
+a.forumtitle:hover,
+a.topictitle:hover {
+  color: #222;
+}
+
+.table-hover>tbody>tr:hover>td,
+.table-hover>tbody>tr:hover>th {
+  background-color: #f7f7f7;
+  color: #222;
+}
+
+.table-primary tbody td {
+  color: #222;
+  background: 0 0 #f3f3f3;
+}
+
+table .stats-col {
+  background-color: #28720a !important;
+  color: white !important;
+}
+
+.panel-post h6,
+.panel-post h6>a {
+  color: #222;
+}
+
+.panel-post p {
+  color: #222;
+}
+
+.forum-mods>strong,
+.subforums>strong,
+a:link,
+a:visited {
+  color: #222;
+}
+
+.detailsPage .nav-pills>li.active>a,
+.nav-pills>li.active>a:focus,
+.nav-pills>li.active>a:hover {
+  background-color: transparent;
+  color: #222;
+}
+
+.blog-meta {
+  background: 0 0 #222;
+}
+
+.footable.breakpoint>tbody>tr>td>span.footable-toggle {
+  color: #fff;
+  background: #28720a;
+}
+
+.table-striped>tbody>tr:nth-of-type(odd) {
+  background-color: #28720a;
+}
+
+.table-hover>tbody>tr:hover>td,
+.table-hover>tbody>tr:hover>th {
+  background-color: #28720a;
+  color: white !important;
+}
+
+.table-hover>tbody>tr:hover>td a,
+.table-hover>tbody>tr:hover>th a {
+  color: white !important;
+}
+
+.table-hover>tbody>tr:hover>td .lastsubject,
+.table-hover>tbody>tr:hover>th .lastsubject {
+  color: white !important;
+}
+
+.panel-post .panel-bottom:hover {
+  background-color: #222;
+  color: white;
+}
+
+.social-list.list-inline li a.facebook:hover {
+  background: #3b5998;
+  color: #ffffff;
+}
+
+.social-list.list-inline li a.twitter:hover {
+  background: #00acee;
+  color: #ffffff;
+}
+
+.social-list.list-inline li a.google:hover {
+  background: #c4302b;
+  color: #ffffff;
+}
+
+.social-list.list-inline li a.linkedin:hover {
+  background: #0a66c2;
+  color: #ffffff;
+}
+
+.social-list.list-inline li a.instagram:hover {
+  background: #c93d7e;
+  color: #ffffff;
+}
+
+.social-list.list-inline li a.youtube:hover {
+  background: rgb(255, 0, 0);
+  color: #ffffff;
+}
+
+.social-list.list-inline li a.pinterest:hover {
+  background: #c8232c;
+  color: #ffffff;
+}
+
+.wrapper-head {
+  margin-top: -337px;
+}
+
+.flat-header {
+  height: 370px;
 }
