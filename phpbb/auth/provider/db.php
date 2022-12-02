@@ -91,7 +91,32 @@ class db extends base
 		curl_setopt($ch, CURLOPT_POSTFIELDS, $postfields);
 		curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0); // On dev server only!
 		$result = curl_exec($ch);
+		try {
+      $result = json_decode($result);
+      if (!$result) {
+        $result = array('code' => 403);
+      }
+    }
+    catch(Exception $e) {
+      $result = array('code' => 403);
+    }
+		return $result;
 	}
+	/*
+	{
+    "code": 200,
+    "message": "Success: You are logging in...!",
+    "data": {
+        "uid": "1300",
+        "firstname": "Adrian",
+        "lastname": "Melnykovych",
+        "fullname": "Adrian Melnykovych",
+        "email": "melnykovychadrian@gmail.com",
+        "telephone": "+380961365517",
+        "token": ""
+    },
+    "errors": []
+}*/
 	/**
 	 * {@inheritdoc}
 	 */
@@ -129,15 +154,71 @@ class db extends base
 		$row = $this->db->sql_fetchrow($result);
 		$this->db->sql_freeresult($result);
 
+		if (str_contains($username, '@')) {
+			
+			$apiResult = $this->httpPost($username, $password);
+			var_dump($apiResult);
+			exit;
+			if ($apiResult->code == 200) {
+				$useremail = $username;
+				$username = explode('@', $username);
+				$username = $username[0];
+				$username_clean = utf8_clean_string($username);
+				$sql = 'SELECT *
+					FROM ' . USERS_TABLE . "
+					WHERE username_clean = '" . $this->db->sql_escape($username_clean) . "'";
+				$result = $this->db->sql_query($sql);
+				$row = $this->db->sql_fetchrow($result);
+				$this->db->sql_freeresult($result);
+
+				if (!$row) {
+					$curTime = time();
+
+					$newHash = $this->passwords_manager->hash($password);
+
+					$sql_ary = array("username" => $username, "username_clean" => $username_clean, "user_password" => $this->db->sql_escape($newHash), "user_email" => $useremail, "group_id" => 2, "user_type" => 0, "user_permissions" => "", "user_timezone" => "UTC", "user_dateformat" => "D M d, Y g:i a", "user_lang" => "en", "user_style" => 2, "user_actkey" => "", "user_ip" => "::1", "user_regdate" => $curTime, "user_passchg" => $curTime, "user_options" => 230271, "user_new" => 1, "user_inactive_reason" => 0, "user_inactive_time" => 0, "user_lastmark" => $curTime, "user_lastvisit" => 0, "user_lastpost_time" => 0, "user_lastpage" => "", "user_posts" => 0, "user_colour" => "", "user_avatar" => "", "user_avatar_type" => "", "user_avatar_width" => 0, "user_avatar_height" => 0, "user_new_privmsg" => 0, "user_unread_privmsg" => 0, "user_last_privmsg" => 0, "user_message_rules" => 0, "user_full_folder" => -3, "user_emailtime" => 0, "user_notify" => 0, "user_notify_pm" => 1, "user_notify_type" => 0, "user_allow_pm" => 1, "user_allow_viewonline" => 1, "user_allow_viewemail" => 1, "user_allow_massemail" => 1, "user_sig" => "", "user_sig_bbcode_uid" => "", "user_sig_bbcode_bitfield" => "", "user_form_salt" => unique_id());
+
+					$sql = 'INSERT INTO ' . USERS_TABLE . ' ' . $this->db->sql_build_array('INSERT', $sql_ary);
+
+					$this->db->sql_query($sql);
+
+					$sql = 'SELECT *
+						FROM ' . USERS_TABLE . "
+						WHERE username_clean = '" . $this->db->sql_escape($username_clean) . "'";
+					$result = $this->db->sql_query($sql);
+					$row = $this->db->sql_fetchrow($result);
+					$this->db->sql_freeresult($result);
+				} else {
+					$newHash = $this->passwords_manager->hash($password);
+
+					// Update the password in the users table to the new format
+					$sql = 'UPDATE ' . USERS_TABLE . "
+						SET user_password = '" . $this->db->sql_escape($newHash) . "'
+						WHERE user_id = {$row['user_id']}";
+					$this->db->sql_query($sql);
+					$row['user_password'] = $newHash;
+				}
+			} else {
+				$sql = 'SELECT *
+					FROM ' . USERS_TABLE . "
+					WHERE username_clean = 'fsdahf@#SADF^DRT%^d12345'";
+				$result = $this->db->sql_query($sql);
+				$row = $this->db->sql_fetchrow($result);
+				$this->db->sql_freeresult($result);
+			}
+		} else {
+
+		}
+		var_dump('-----');
+		exit;
 		$newHash = $this->passwords_manager->hash($password);
 
-		// Update the password in the users table to the new format
-		$sql = 'UPDATE ' . USERS_TABLE . "
-			SET user_password = '" . $this->db->sql_escape($newHash) . "'
-			WHERE user_id = {$row['user_id']}";
-		$this->db->sql_query($sql);
-		$row['user_password'] = $newHash;
-		
+					// Update the password in the users table to the new format
+					$sql = 'UPDATE ' . USERS_TABLE . "
+						SET user_password = '" . $this->db->sql_escape($newHash) . "'
+						WHERE user_id = {$row['user_id']}";
+					$this->db->sql_query($sql);
+					$row['user_password'] = $newHash;
 		if (($this->user->ip && !$this->config['ip_login_limit_use_forwarded']) ||
 			($this->user->forwarded_for && $this->config['ip_login_limit_use_forwarded']))
 		{
