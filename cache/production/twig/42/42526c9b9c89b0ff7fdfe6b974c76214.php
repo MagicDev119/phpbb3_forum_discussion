@@ -314,7 +314,7 @@ class __TwigTemplate_d6a2b53468b1ea488a9c02f93a4e86f7 extends \Twig\Template
 \t<div class=\"header-bottom-part\">
 \t\t<div class=\"container\">
 \t\t\t<div class=\"row mobile-flex\">
-\t\t\t\t<div class=\"col-lg-3 col-md-2 col-sm-3 col-xs-5 right-padding logo-part-nav-left in-mobile\">
+\t\t\t\t<div class=\"col-lg-3 col-md-2 col-sm-3 col-xs-3 right-padding logo-part-nav-left in-mobile\">
 \t\t\t\t\t<div class=\"bottom-header-left-panel\">
 \t\t\t\t\t\t<div class=\"logo-box\"> <a href=\"https://www.wellnessherbs.com/\"><img src=\"";
         // line 136
@@ -457,10 +457,10 @@ class __TwigTemplate_d6a2b53468b1ea488a9c02f93a4e86f7 extends \Twig\Template
 \t\t\t\t\t\t</div>
 \t\t\t\t\t</form>
 \t\t\t\t</div>
-\t\t\t\t<div class=\"col-lg-4 col-md-5 col-sm-4 col-xs-7 logo-part-nav-right\">
+\t\t\t\t<div class=\"col-lg-4 col-md-5 col-sm-4 col-xs-9 logo-part-nav-right\">
 \t\t\t\t\t<div class=\"search-block\">
 \t\t\t\t\t\t<div class=\"row\">
-\t\t\t\t\t\t\t<div class=\"col-xs-10 left-padding text-right\">
+\t\t\t\t\t\t\t<div class=\"col-md-10 col-sm-9 col-xs-10 left-padding text-right\">
 \t\t\t\t\t\t\t\t<div class=\"top-header-nav\">
 \t\t\t\t\t\t\t\t\t<ul class=\"nav navbar-nav pull-right\">
 \t\t\t\t\t\t\t\t\t\t";
@@ -538,9 +538,9 @@ class __TwigTemplate_d6a2b53468b1ea488a9c02f93a4e86f7 extends \Twig\Template
 \t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"header-text hidden-sm hidden-xs\">Favorites</span></a></li> -->
 
 \t\t\t\t\t\t\t\t\t\t<li><a
-\t\t\t\t\t\t\t\t\t\t\t\thref=\"https://www.wellnessherbs.com/index.php?route=extension/module/questions_and_answers/faq\"><span><i
-\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"icon icon-noun_question_help_629634_000000\"></i></span><span
-\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"header-text hidden-xs hidden-sm\">FAQ</span></a></li>
+\t\t\t\t\t\t\t\t\t\t\t\thref=\"https://www.wellnessherbs.com/insight-blog\"><span><i
+\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"icon icon-blog-green\"></i></span><span
+\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"header-text hidden-xs hidden-sm\">Blog</span></a></li>
 
 
 \t\t\t\t\t\t\t\t\t\t<li class=\"hide-small\"><a href=\"https://affiliate.wellnessherbs.com/\"><span><i
@@ -550,7 +550,7 @@ class __TwigTemplate_d6a2b53468b1ea488a9c02f93a4e86f7 extends \Twig\Template
 \t\t\t\t\t\t\t\t\t</ul>
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t<div class=\"col-xs-2 left-padding text-right cart-block\">
+\t\t\t\t\t\t\t<div class=\"col-md-2 col-sm-3 col-xs-2 left-padding text-right cart-block\">
 \t\t\t\t\t\t\t\t<div id=\"cart\">
 \t\t\t\t\t\t\t\t\t<a href=\"https://www.wellnessherbs.com/\">
 \t\t\t\t\t\t\t\t\t\t<div class=\"cart-block dropdown-toggle\">

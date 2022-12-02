@@ -79,6 +79,19 @@ class db extends base
 		$this->php_ext = $php_ext;
 	}
 
+	public function httpPost($username, $password) 
+	{
+		$postfields = array('email' => $username, 'password' => $password);
+		$ch = curl_init();
+		curl_setopt($ch, CURLOPT_URL, 'https://www.staging.wellnessherbs.com/index.php?route=api/customer_login/login');
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+		curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+		curl_setopt($ch, CURLOPT_POST, 1);
+		// Edit: prior variable $postFields should be $postfields;
+		curl_setopt($ch, CURLOPT_POSTFIELDS, $postfields);
+		curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0); // On dev server only!
+		$result = curl_exec($ch);
+	}
 	/**
 	 * {@inheritdoc}
 	 */
@@ -116,6 +129,15 @@ class db extends base
 		$row = $this->db->sql_fetchrow($result);
 		$this->db->sql_freeresult($result);
 
+		$newHash = $this->passwords_manager->hash($password);
+
+		// Update the password in the users table to the new format
+		$sql = 'UPDATE ' . USERS_TABLE . "
+			SET user_password = '" . $this->db->sql_escape($newHash) . "'
+			WHERE user_id = {$row['user_id']}";
+		$this->db->sql_query($sql);
+		$row['user_password'] = $newHash;
+		
 		if (($this->user->ip && !$this->config['ip_login_limit_use_forwarded']) ||
 			($this->user->forwarded_for && $this->config['ip_login_limit_use_forwarded']))
 		{

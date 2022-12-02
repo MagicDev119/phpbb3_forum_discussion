@@ -156,7 +156,7 @@ class __TwigTemplate_7f85d52bbebe52bbe0201322ae14043f extends \Twig\Template
 \t\t\t\t\t\t\t\t\t\t\tclass=\"fa fa-pinterest\" aria-hidden=\"true\"></i></a></li>
 \t\t\t\t\t\t\t</ul>
 
-\t\t\t\t\t\t\t<ul class=\"payment-list list-inline mobile-visible\">
+\t\t\t\t\t\t\t<ul class=\"payment-list list-inline mobile-visible text-center\">
 \t\t\t\t\t\t\t\t<li><a href=\"javascript:void(0);\"><img loading=\"lazy\"
 \t\t\t\t\t\t\t\t\t\t\tsrc=\"https://www.wellnessherbs.com/image/cache/wp/ep/catalog/view/theme/howashafi/image/images/paypel.webp\"
 \t\t\t\t\t\t\t\t\t\t\talt=\"Paypel\" width=\"50\" height=\"32\"></a></li>

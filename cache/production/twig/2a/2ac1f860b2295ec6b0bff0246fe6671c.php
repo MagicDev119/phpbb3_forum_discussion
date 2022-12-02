@@ -38,7 +38,7 @@ class __TwigTemplate_0d9daa4eea1eac2f9da7b9c50378e04a extends \Twig\Template
 <div class=\"masthead\"></div>
     <div class=\"wrapper-head\">
 \t \t\t<div class=\"container\">
-\t\t\t\t<div class=\"col-md-6\">
+\t\t\t\t<div class=\"col-md-7 col-sm-7 col-xs-6\">
 \t\t\t\t\t";
         // line 6
         if (((($context["TEASER_TITLE"] ?? null) != "") || (($context["TEASER_TEXT"] ?? null) != ""))) {
@@ -66,11 +66,11 @@ class __TwigTemplate_0d9daa4eea1eac2f9da7b9c50378e04a extends \Twig\Template
         }
         // line 13
         echo "\t\t\t\t</div>
-\t\t\t\t<div class=\"col-md-6\">
+\t\t\t\t<div class=\"col-md-5 col-sm-5 col-xs-6\">
 \t\t\t\t\t<img src=\"";
         // line 15
         echo ($context["ROOT_PATH"] ?? null);
-        echo "images/banner.jpg\"
+        echo "images/banner.svg\"
 \t\t\t\t\t\talt=\"Heavenly Herbals | Organic Herbal Supplements for Complete Wellness\" style=\"width: 100%;\">
 \t\t\t\t</div>
     \t</div>
