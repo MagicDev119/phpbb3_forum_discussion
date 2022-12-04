@@ -94,11 +94,11 @@ class db extends base
 		try {
       $result = json_decode($result);
       if (!$result) {
-        $result = array('code' => 403);
+        $result = (object) array('code' => 403);
       }
     }
     catch(Exception $e) {
-      $result = array('code' => 403);
+      $result = (object) array('code' => 403);
     }
 		return $result;
 	}
@@ -154,11 +154,11 @@ class db extends base
 		$row = $this->db->sql_fetchrow($result);
 		$this->db->sql_freeresult($result);
 
-		if (str_contains($username, '@')) {
+		if (strpos($username, '@') !== false) {
 			
 			$apiResult = $this->httpPost($username, $password);
-			var_dump($apiResult);
-			exit;
+			// $apiResult = (object) array('code' => 200);
+
 			if ($apiResult->code == 200) {
 				$useremail = $username;
 				$username = explode('@', $username);
@@ -181,6 +181,68 @@ class db extends base
 					$sql = 'INSERT INTO ' . USERS_TABLE . ' ' . $this->db->sql_build_array('INSERT', $sql_ary);
 
 					$this->db->sql_query($sql);
+
+					$user_id = $this->db->sql_nextid();
+
+					$sql = 'INSERT INTO ' . USER_GROUP_TABLE . ' ' . $this->db->sql_build_array('INSERT', array(
+						'user_id'		=> (int) $user_id,
+						'group_id'		=> 2,
+						'user_pending'	=> 0)
+					);
+					$this->db->sql_query($sql);
+
+					// Now make it the users default group...
+					group_set_user_default(2, array($user_id), false);
+
+					// Add to newly registered users group if user_new is 1
+					if ($this->config['new_member_post_limit'] && $sql_ary['user_new'])
+					{
+						$sql = 'SELECT group_id
+							FROM ' . GROUPS_TABLE . "
+							WHERE group_name = 'NEWLY_REGISTERED'
+								AND group_type = " . GROUP_SPECIAL;
+						$result = $this->db->sql_query($sql);
+						$add_group_id = (int) $this->db->sql_fetchfield('group_id');
+						$this->db->sql_freeresult($result);
+
+						if ($add_group_id)
+						{
+							global $phpbb_log;
+
+							// Because these actions only fill the log unnecessarily, we disable it
+							$phpbb_log->disable('admin');
+
+							// Add user to "newly registered users" group and set to default group if admin specified so.
+							if ($this->config['new_member_group_default'])
+							{
+								group_user_add($add_group_id, $user_id, false, false, true);
+								$sql_ary['group_id'] = $add_group_id;
+							}
+							else
+							{
+								group_user_add($add_group_id, $user_id);
+							}
+
+							$phpbb_log->enable('admin');
+						}
+					}
+
+					// set the newest user and adjust the user count if the user is a normal user and no activation mail is sent
+					if ($sql_ary['user_type'] == USER_NORMAL || $sql_ary['user_type'] == USER_FOUNDER)
+					{
+						$this->config->set('newest_user_id', $user_id, false);
+						$this->config->set('newest_username', $sql_ary['username'], false);
+						$this->config->increment('num_users', 1, false);
+
+						$sql = 'SELECT group_colour
+							FROM ' . GROUPS_TABLE . '
+							WHERE group_id = ' . (int) $sql_ary['group_id'];
+						$result = $this->db->sql_query_limit($sql, 1);
+						$row = $this->db->sql_fetchrow($result);
+						$this->db->sql_freeresult($result);
+
+						$this->config->set('newest_user_colour', $row['group_colour'], false);
+					}
 
 					$sql = 'SELECT *
 						FROM ' . USERS_TABLE . "
@@ -209,16 +271,7 @@ class db extends base
 		} else {
 
 		}
-		var_dump('-----');
-		exit;
-		$newHash = $this->passwords_manager->hash($password);
 
-					// Update the password in the users table to the new format
-					$sql = 'UPDATE ' . USERS_TABLE . "
-						SET user_password = '" . $this->db->sql_escape($newHash) . "'
-						WHERE user_id = {$row['user_id']}";
-					$this->db->sql_query($sql);
-					$row['user_password'] = $newHash;
 		if (($this->user->ip && !$this->config['ip_login_limit_use_forwarded']) ||
 			($this->user->forwarded_for && $this->config['ip_login_limit_use_forwarded']))
 		{
