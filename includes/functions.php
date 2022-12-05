@@ -3381,6 +3381,31 @@ function obtain_users_online($item_id = 0, $item = 'forum')
 	return $online_users;
 }
 
+function get_best_selling_products() {
+	$ch = curl_init();
+	curl_setopt($ch, CURLOPT_URL, 'https://www.staging.wellnessherbs.com/index.php?route=api/most_selling&limit=10');
+	$headers = array(
+		'Accept: application/json',
+		'Content-Type: application/json',
+	);
+	curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+	curl_setopt($ch, CURLOPT_HEADER, 0);
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0); // On dev server only!
+
+	$result = curl_exec($ch);
+	try {
+		$result = json_decode($result);
+		if (!$result) {
+			$result = (object) array('code' => 403, data => (object) array('products' => []));
+		}
+	}
+	catch(Exception $e) {
+		$result = (object) array('code' => 403, data => (object) array('products' => []));
+	}
+	return $result->data ? ($result->data->products ? $result->data->products : []) : [];
+}
+
 /**
 * Uses the result of obtain_users_online to generate a localized, readable representation.
 * @param mixed $online_users result of obtain_users_online - array with user_id lists for total, hidden and visible users, and statistics
@@ -3846,7 +3871,7 @@ function page_header($page_title = '', $display_online_list = false, $item_id = 
 
 		$l_online_time = $user->lang('VIEW_ONLINE_TIMES', (int) $config['load_online_time']);
 	}
-
+	
 	$s_privmsg_new = false;
 
 	// Check for new private messages if user is logged in
@@ -3970,6 +3995,8 @@ function page_header($page_title = '', $display_online_list = false, $item_id = 
 		$template->assign_var('S_FORM_TOKEN_LOGIN', '');
 	}
 
+	$bestSellingProducts = get_best_selling_products();
+	
 	// The following assigns all _common_ variables that may be used at any point in a template.
 	$template->assign_vars(array(
 		'SITENAME'						=> $config['sitename'],
@@ -3982,6 +4009,16 @@ function page_header($page_title = '', $display_online_list = false, $item_id = 
 		'TOTAL_USERS_ONLINE'			=> $l_online_users,
 		'LOGGED_IN_USER_LIST'			=> $online_userlist,
 		'RECORD_USERS'					=> $l_online_record,
+		'BEST_SELLING_PRODUCTS'	=> $bestSellingProducts[0],
+		'BEST_SELLING_PRODUCTS_1'	=> $bestSellingProducts[1],
+		'BEST_SELLING_PRODUCTS_2'	=> $bestSellingProducts[2],
+		'BEST_SELLING_PRODUCTS_3'	=> $bestSellingProducts[3],
+		'BEST_SELLING_PRODUCTS_4'	=> $bestSellingProducts[4],
+		'BEST_SELLING_PRODUCTS_5'	=> $bestSellingProducts[5],
+		'BEST_SELLING_PRODUCTS_6'	=> $bestSellingProducts[6],
+		'BEST_SELLING_PRODUCTS_7'	=> $bestSellingProducts[7],
+		'BEST_SELLING_PRODUCTS_8'	=> $bestSellingProducts[8],
+		'BEST_SELLING_PRODUCTS_9'	=> $bestSellingProducts[9],
 
 		'PRIVATE_MESSAGE_COUNT'			=> (!empty($user->data['user_unread_privmsg'])) ? $user->data['user_unread_privmsg'] : 0,
 		'CURRENT_USER_AVATAR'			=> phpbb_get_user_avatar($user->data),

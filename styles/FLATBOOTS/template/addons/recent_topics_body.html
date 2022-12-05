@@ -1,107 +1,514 @@
 <!-- Recent Lazy Topics Loader Section -->
-        <div class="row text-center">
-            <div class="col-md-3">
+			<div class="carousel-wrapper row text-center">
+        <div class="owl-theme owl-carousel">
+            <div class="item">
                 <div class="panel panel-post">
-				   <div class="blog-meta">
-					<time datetime="2013-04-18T10:45:28+00:00" class="entry-date">
-					 <span class="day">18</span>
-					 <span class="month">Apr</span>
-					</time>
-				   </div>
-				   <div class="title">
-					<header class="entry-header">
-					  <h6 class="inverse-font">long long title how many chars? lets see 123 ok more? yes 60</h6>
-						<div class="entry-meta">
-						 <span class="jp-views">&nbsp;-&nbsp;By&nbsp;<a style="color: #48D1CC; font-weight: bold;" href="#" class="text-warning" title="">Admin</a></span>
+						<div class="content-post">
+							<img src="{BEST_SELLING_PRODUCTS.thumb}">
 						</div>
-					</header>
-			       </div>
-				   <div class="content-post">
+				   <div class="title">
+							<header class="entry-header text-left">
+								<h6 class="inverse-font">{BEST_SELLING_PRODUCTS.name}</h6>
+								<div>
+									<!-- IF (BEST_SELLING_PRODUCTS.rating >= 0.5) -->
+									<span class="fa fa-star checked"></span>
+									<!-- ELSE -->
+									<span class="fa fa-star"></span>
+									<!-- ENDIF -->
+									<!-- IF (BEST_SELLING_PRODUCTS.rating >= 1.5) -->
+									<span class="fa fa-star checked"></span>
+									<!-- ELSE -->
+									<span class="fa fa-star"></span>
+									<!-- ENDIF -->
+									<!-- IF (BEST_SELLING_PRODUCTS.rating >= 2.5) -->
+									<span class="fa fa-star checked"></span>
+									<!-- ELSE -->
+									<span class="fa fa-star"></span>
+									<!-- ENDIF -->
+									<!-- IF (BEST_SELLING_PRODUCTS.rating >= 3.5) -->
+									<span class="fa fa-star checked"></span>
+									<!-- ELSE -->
+									<span class="fa fa-star"></span>
+									<!-- ENDIF -->
+									<!-- IF (BEST_SELLING_PRODUCTS.rating >= 4.5) -->
+									<span class="fa fa-star checked"></span>
+									<!-- ELSE -->
+									<span class="fa fa-star"></span>
+									<!-- ENDIF -->
+								</div>
+								<div class="entry-meta">
+									<span class="day">{BEST_SELLING_PRODUCTS.price}</span>
+									<span class="month"><small><del>{BEST_SELLING_PRODUCTS.special}</del></small></span>
+								</div>
+							</header>
+						</div>
+				   <!-- <div class="content-post">
 				    <p>We have created lots of YouTube videos just so you can achieve [...]</p>  
-				   </div>
+				   </div> -->
 				<div class="panel-bottom">
-					<a href="#" class="btn btn-xs btn-link" data-original-title="" title="">READ MORE</a>
+					<a href="{BEST_SELLING_PRODUCTS.href}" class="btn btn-xs btn-link" data-original-title="" title="">READ MORE</a>
 				</div>               
 			   </div>
             </div>
             
-           <div class="col-md-3">
+           <div class="item">
                 <div class="panel panel-post">
-				   <div class="blog-meta">
-					<time datetime="2013-04-18T10:45:28+00:00" class="entry-date">
-					 <span class="day">25</span>
-					 <span class="month">June</span>
-					</time>
-				   </div>
+					<div class="content-post">
+						<img src="{BEST_SELLING_PRODUCTS_1.thumb}">
+					</div>
 				   <div class="title">
-					<header class="entry-header">
-					  <h6 class="inverse-font">Another post test yes yes yes or no, maybe ni? :-/</h6>
-						<div class="entry-meta">
-						 <span class="jp-views">&nbsp;-&nbsp;By&nbsp;<a style="color: #C8E44F; font-weight: bold;" href="#" class="text-warning" title="">SiteSplat</a></span>
-						</div>
-					</header>
+							<header class="entry-header text-left">
+								<h6 class="inverse-font">{BEST_SELLING_PRODUCTS_1.name}</h6>
+								<div>
+									<!-- IF (BEST_SELLING_PRODUCTS_1.rating >= 0.5) -->
+									<span class="fa fa-star checked"></span>
+									<!-- ELSE -->
+									<span class="fa fa-star"></span>
+									<!-- ENDIF -->
+									<!-- IF (BEST_SELLING_PRODUCTS_1.rating >= 1.5) -->
+									<span class="fa fa-star checked"></span>
+									<!-- ELSE -->
+									<span class="fa fa-star"></span>
+									<!-- ENDIF -->
+									<!-- IF (BEST_SELLING_PRODUCTS_1.rating >= 2.5) -->
+									<span class="fa fa-star checked"></span>
+									<!-- ELSE -->
+									<span class="fa fa-star"></span>
+									<!-- ENDIF -->
+									<!-- IF (BEST_SELLING_PRODUCTS_1.rating >= 3.5) -->
+									<span class="fa fa-star checked"></span>
+									<!-- ELSE -->
+									<span class="fa fa-star"></span>
+									<!-- ENDIF -->
+									<!-- IF (BEST_SELLING_PRODUCTS_1.rating >= 4.5) -->
+									<span class="fa fa-star checked"></span>
+									<!-- ELSE -->
+									<span class="fa fa-star"></span>
+									<!-- ENDIF -->
+								</div>
+								<div class="entry-meta">
+									<span class="day">{BEST_SELLING_PRODUCTS_1.price}</span>
+									<span class="month"><small><del>{BEST_SELLING_PRODUCTS_1.special}</del></small></span>
+								<!-- <span class="jp-views">&nbsp;-&nbsp;By&nbsp;<a style="color: #C8E44F; font-weight: bold;" href="#" class="text-warning" title="">SiteSplat</a></span> -->
+								</div>
+							</header>
 			       </div>
-				   <div class="content-post">
+				   <!-- <div class="content-post">
 				    <p>The best flat phpBB theme around. Period. Fine craftmanship and [...]</p>  
-				   </div>
+				   </div> -->
 				<div class="panel-bottom">
-					<a href="#" class="btn btn-xs btn-link" data-original-title="" title="">READ MORE</a>
+					<a href="{BEST_SELLING_PRODUCTS_1.href}" class="btn btn-xs btn-link" data-original-title="" title="">READ MORE</a>
 				</div>               
 			   </div>
             </div>
             
-            <div class="col-md-3">
+            <div class="item">
                 <div class="panel panel-post">
-				   <div class="blog-meta">
-					<time datetime="2013-04-18T10:45:28+00:00" class="entry-date">
-					 <span class="day">03</span>
-					 <span class="month">July</span>
-					</time>
-				   </div>
+					<div class="content-post">
+						<img src="{BEST_SELLING_PRODUCTS_2.thumb}">
+					</div>
 				   <div class="title">
-					<header class="entry-header">
-					  <h6 class="inverse-font">Do you need a super MOD? Well here it is. chew on this</h6>
+					<header class="entry-header text-left">
+					  <h6 class="inverse-font">{BEST_SELLING_PRODUCTS_2.name}</h6>
+						<div>
+							<!-- IF (BEST_SELLING_PRODUCTS_2.rating >= 0.5) -->
+							<span class="fa fa-star checked"></span>
+							<!-- ELSE -->
+							<span class="fa fa-star"></span>
+							<!-- ENDIF -->
+							<!-- IF (BEST_SELLING_PRODUCTS_2.rating >= 1.5) -->
+							<span class="fa fa-star checked"></span>
+							<!-- ELSE -->
+							<span class="fa fa-star"></span>
+							<!-- ENDIF -->
+							<!-- IF (BEST_SELLING_PRODUCTS_2.rating >= 2.5) -->
+							<span class="fa fa-star checked"></span>
+							<!-- ELSE -->
+							<span class="fa fa-star"></span>
+							<!-- ENDIF -->
+							<!-- IF (BEST_SELLING_PRODUCTS_2.rating >= 3.5) -->
+							<span class="fa fa-star checked"></span>
+							<!-- ELSE -->
+							<span class="fa fa-star"></span>
+							<!-- ENDIF -->
+							<!-- IF (BEST_SELLING_PRODUCTS_2.rating >= 4.5) -->
+							<span class="fa fa-star checked"></span>
+							<!-- ELSE -->
+							<span class="fa fa-star"></span>
+							<!-- ENDIF -->
+						</div>
 						<div class="entry-meta">
-						 <span class="jp-views">&nbsp;-&nbsp;By&nbsp;<a style="color: #D65B49; font-weight: bold;" href="#" class="text-warning" title="">Jane lou</a></span>
+									<span class="day">{BEST_SELLING_PRODUCTS_2.price}</span>
+									<span class="month"><small><del>{BEST_SELLING_PRODUCTS_2.special}</del></small></span>
+						 <!-- <span class="jp-views">&nbsp;-&nbsp;By&nbsp;<a style="color: #D65B49; font-weight: bold;" href="#" class="text-warning" title="">Jane lou</a></span> -->
 						</div>
 					</header>
 			       </div>
-				   <div class="content-post">
+				   <!-- <div class="content-post">
 				    <p>All you need is right here. Content tag, SEO, listing, Pizza and spaghetti [...]</p>  
-				   </div>
+				   </div> -->
 				<div class="panel-bottom">
-					<a href="#" class="btn btn-xs btn-link" data-original-title="" title="">READ MORE</a>
+					<a href="{BEST_SELLING_PRODUCTS_2.href}" class="btn btn-xs btn-link" data-original-title="" title="">READ MORE</a>
 				</div>               
 			   </div>
             </div>
 
-            <div class="col-md-3">
+            <div class="item">
                 <div class="panel panel-post">
-				   <div class="blog-meta">
-					<time datetime="2013-04-18T10:45:28+00:00" class="entry-date">
-					 <span class="day">30</span>
-					 <span class="month">Dec</span>
-					</time>
-				   </div>
+					<div class="content-post">
+						<img src="{BEST_SELLING_PRODUCTS_3.thumb}">
+					</div>
 				   <div class="title">
-					<header class="entry-header">
-					  <h6 class="inverse-font">Lasagna on me this time ok? I got plenty of cash</h6>
+					<header class="entry-header text-left">
+					  <h6 class="inverse-font">{BEST_SELLING_PRODUCTS_3.name}</h6>
+						<div>
+							<!-- IF (BEST_SELLING_PRODUCTS_3.rating >= 0.5) -->
+							<span class="fa fa-star checked"></span>
+							<!-- ELSE -->
+							<span class="fa fa-star"></span>
+							<!-- ENDIF -->
+							<!-- IF (BEST_SELLING_PRODUCTS_3.rating >= 1.5) -->
+							<span class="fa fa-star checked"></span>
+							<!-- ELSE -->
+							<span class="fa fa-star"></span>
+							<!-- ENDIF -->
+							<!-- IF (BEST_SELLING_PRODUCTS_3.rating >= 2.5) -->
+							<span class="fa fa-star checked"></span>
+							<!-- ELSE -->
+							<span class="fa fa-star"></span>
+							<!-- ENDIF -->
+							<!-- IF (BEST_SELLING_PRODUCTS_3.rating >= 3.5) -->
+							<span class="fa fa-star checked"></span>
+							<!-- ELSE -->
+							<span class="fa fa-star"></span>
+							<!-- ENDIF -->
+							<!-- IF (BEST_SELLING_PRODUCTS_3.rating >= 4.5) -->
+							<span class="fa fa-star checked"></span>
+							<!-- ELSE -->
+							<span class="fa fa-star"></span>
+							<!-- ENDIF -->
+						</div>
 						<div class="entry-meta">
-						 <span class="jp-views">&nbsp;-&nbsp;By&nbsp;<a style="color: #6AB3EB; font-weight: bold;" href="#" class="text-warning" title="">Larry Page</a></span>
+									<span class="day">{BEST_SELLING_PRODUCTS_3.price}</span>
+									<span class="month"><small><del>{BEST_SELLING_PRODUCTS_3.special}</del></small></span>
+						 <!-- <span class="jp-views">&nbsp;-&nbsp;By&nbsp;<a style="color: #6AB3EB; font-weight: bold;" href="#" class="text-warning" title="">Larry Page</a></span> -->
 						</div>
 					</header>
 			       </div>
-				   <div class="content-post">
+				   <!-- <div class="content-post">
 				    <p>this should be fantastic. but what about links,images, bbcodes etc etc? [...]</p>  
-				   </div>
+				   </div> -->
 				<div class="panel-bottom">
-					<a href="#" class="btn btn-xs btn-link" data-original-title="" title="">READ MORE</a>
+					<a href="{BEST_SELLING_PRODUCTS_3.href}" class="btn btn-xs btn-link" data-original-title="" title="">READ MORE</a>
 				</div>               
 			   </div>
             </div>
-           
-		 <div class="col-md-12">
+
+						<div class="item">
+							<div class="panel panel-post">
+								<div class="content-post">
+									<img src="{BEST_SELLING_PRODUCTS_4.thumb}">
+								</div>
+								<div class="title">
+									<header class="entry-header text-left">
+										<h6 class="inverse-font">{BEST_SELLING_PRODUCTS_4.name}</h6>
+										<div>
+											<!-- IF (BEST_SELLING_PRODUCTS_4.rating >= 0.5) -->
+											<span class="fa fa-star checked"></span>
+											<!-- ELSE -->
+											<span class="fa fa-star"></span>
+											<!-- ENDIF -->
+											<!-- IF (BEST_SELLING_PRODUCTS_4.rating >= 1.5) -->
+											<span class="fa fa-star checked"></span>
+											<!-- ELSE -->
+											<span class="fa fa-star"></span>
+											<!-- ENDIF -->
+											<!-- IF (BEST_SELLING_PRODUCTS_4.rating >= 2.5) -->
+											<span class="fa fa-star checked"></span>
+											<!-- ELSE -->
+											<span class="fa fa-star"></span>
+											<!-- ENDIF -->
+											<!-- IF (BEST_SELLING_PRODUCTS_4.rating >= 3.5) -->
+											<span class="fa fa-star checked"></span>
+											<!-- ELSE -->
+											<span class="fa fa-star"></span>
+											<!-- ENDIF -->
+											<!-- IF (BEST_SELLING_PRODUCTS_4.rating >= 4.5) -->
+											<span class="fa fa-star checked"></span>
+											<!-- ELSE -->
+											<span class="fa fa-star"></span>
+											<!-- ENDIF -->
+										</div>
+										<div class="entry-meta">
+									<span class="day">{BEST_SELLING_PRODUCTS_4.price}</span>
+									<span class="month"><small><del>{BEST_SELLING_PRODUCTS_4.special}</del></small></span>
+										</div>
+									</header>
+								</div>
+								<div class="panel-bottom">
+									<a href="{BEST_SELLING_PRODUCTS_4.href}" class="btn btn-xs btn-link" data-original-title="" title="">READ MORE</a>
+								</div>
+							</div>
+						</div>
+						
+						<div class="item">
+							<div class="panel panel-post">
+								<div class="content-post">
+									<img src="{BEST_SELLING_PRODUCTS_5.thumb}">
+								</div>
+								<div class="title">
+									<header class="entry-header text-left">
+										<h6 class="inverse-font">{BEST_SELLING_PRODUCTS_5.name}</h6>
+										<div>
+											<!-- IF (BEST_SELLING_PRODUCTS_5.rating >= 0.5) -->
+											<span class="fa fa-star checked"></span>
+											<!-- ELSE -->
+											<span class="fa fa-star"></span>
+											<!-- ENDIF -->
+											<!-- IF (BEST_SELLING_PRODUCTS_5.rating >= 1.5) -->
+											<span class="fa fa-star checked"></span>
+											<!-- ELSE -->
+											<span class="fa fa-star"></span>
+											<!-- ENDIF -->
+											<!-- IF (BEST_SELLING_PRODUCTS_5.rating >= 2.5) -->
+											<span class="fa fa-star checked"></span>
+											<!-- ELSE -->
+											<span class="fa fa-star"></span>
+											<!-- ENDIF -->
+											<!-- IF (BEST_SELLING_PRODUCTS_5.rating >= 3.5) -->
+											<span class="fa fa-star checked"></span>
+											<!-- ELSE -->
+											<span class="fa fa-star"></span>
+											<!-- ENDIF -->
+											<!-- IF (BEST_SELLING_PRODUCTS_5.rating >= 4.5) -->
+											<span class="fa fa-star checked"></span>
+											<!-- ELSE -->
+											<span class="fa fa-star"></span>
+											<!-- ENDIF -->
+										</div>
+										<div class="entry-meta">
+									<span class="day">{BEST_SELLING_PRODUCTS_5.price}</span>
+									<span class="month"><small><del>{BEST_SELLING_PRODUCTS_5.special}</del></small></span>
+										</div>
+									</header>
+								</div>
+								<div class="panel-bottom">
+									<a href="{BEST_SELLING_PRODUCTS_5.href}" class="btn btn-xs btn-link" data-original-title="" title="">READ MORE</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="item">
+							<div class="panel panel-post">
+								<div class="content-post">
+									<img src="{BEST_SELLING_PRODUCTS_6.thumb}">
+								</div>
+								<div class="title">
+									<header class="entry-header text-left">
+										<h6 class="inverse-font">{BEST_SELLING_PRODUCTS_6.name}</h6>
+										<div>
+											<!-- IF (BEST_SELLING_PRODUCTS_6.rating >= 0.5) -->
+											<span class="fa fa-star checked"></span>
+											<!-- ELSE -->
+											<span class="fa fa-star"></span>
+											<!-- ENDIF -->
+											<!-- IF (BEST_SELLING_PRODUCTS_6.rating >= 1.5) -->
+											<span class="fa fa-star checked"></span>
+											<!-- ELSE -->
+											<span class="fa fa-star"></span>
+											<!-- ENDIF -->
+											<!-- IF (BEST_SELLING_PRODUCTS_6.rating >= 2.5) -->
+											<span class="fa fa-star checked"></span>
+											<!-- ELSE -->
+											<span class="fa fa-star"></span>
+											<!-- ENDIF -->
+											<!-- IF (BEST_SELLING_PRODUCTS_6.rating >= 3.5) -->
+											<span class="fa fa-star checked"></span>
+											<!-- ELSE -->
+											<span class="fa fa-star"></span>
+											<!-- ENDIF -->
+											<!-- IF (BEST_SELLING_PRODUCTS_6.rating >= 4.5) -->
+											<span class="fa fa-star checked"></span>
+											<!-- ELSE -->
+											<span class="fa fa-star"></span>
+											<!-- ENDIF -->
+										</div>
+										<div class="entry-meta">
+									<span class="day">{BEST_SELLING_PRODUCTS_6.price}</span>
+									<span class="month"><small><del>{BEST_SELLING_PRODUCTS_6.special}</del></small></span>
+										</div>
+									</header>
+								</div>
+								<div class="panel-bottom">
+									<a href="{BEST_SELLING_PRODUCTS_6.href}" class="btn btn-xs btn-link" data-original-title="" title="">READ MORE</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="item">
+							<div class="panel panel-post">
+								<div class="content-post">
+									<img src="{BEST_SELLING_PRODUCTS_7.thumb}">
+								</div>
+								<div class="title">
+									<header class="entry-header text-left">
+										<h6 class="inverse-font">{BEST_SELLING_PRODUCTS_7.name}</h6>
+										<div>
+											<!-- IF (BEST_SELLING_PRODUCTS_7.rating >= 0.5) -->
+											<span class="fa fa-star checked"></span>
+											<!-- ELSE -->
+											<span class="fa fa-star"></span>
+											<!-- ENDIF -->
+											<!-- IF (BEST_SELLING_PRODUCTS_7.rating >= 1.5) -->
+											<span class="fa fa-star checked"></span>
+											<!-- ELSE -->
+											<span class="fa fa-star"></span>
+											<!-- ENDIF -->
+											<!-- IF (BEST_SELLING_PRODUCTS_7.rating >= 2.5) -->
+											<span class="fa fa-star checked"></span>
+											<!-- ELSE -->
+											<span class="fa fa-star"></span>
+											<!-- ENDIF -->
+											<!-- IF (BEST_SELLING_PRODUCTS_7.rating >= 3.5) -->
+											<span class="fa fa-star checked"></span>
+											<!-- ELSE -->
+											<span class="fa fa-star"></span>
+											<!-- ENDIF -->
+											<!-- IF (BEST_SELLING_PRODUCTS_7.rating >= 4.5) -->
+											<span class="fa fa-star checked"></span>
+											<!-- ELSE -->
+											<span class="fa fa-star"></span>
+											<!-- ENDIF -->
+										</div>
+										<div class="entry-meta">
+									<span class="day">{BEST_SELLING_PRODUCTS_7.price}</span>
+									<span class="month"><small><del>{BEST_SELLING_PRODUCTS_7.special}</del></small></span>
+										</div>
+									</header>
+								</div>
+								<div class="panel-bottom">
+									<a href="{BEST_SELLING_PRODUCTS_7.href}" class="btn btn-xs btn-link" data-original-title="" title="">READ MORE</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="item">
+							<div class="panel panel-post">
+								<div class="content-post">
+									<img src="{BEST_SELLING_PRODUCTS_8.thumb}">
+								</div>
+								<div class="title">
+									<header class="entry-header text-left">
+										<h6 class="inverse-font">{BEST_SELLING_PRODUCTS_8.name}</h6>
+										<div>
+											<!-- IF (BEST_SELLING_PRODUCTS_8.rating >= 0.5) -->
+											<span class="fa fa-star checked"></span>
+											<!-- ELSE -->
+											<span class="fa fa-star"></span>
+											<!-- ENDIF -->
+											<!-- IF (BEST_SELLING_PRODUCTS_8.rating >= 1.5) -->
+											<span class="fa fa-star checked"></span>
+											<!-- ELSE -->
+											<span class="fa fa-star"></span>
+											<!-- ENDIF -->
+											<!-- IF (BEST_SELLING_PRODUCTS_8.rating >= 2.5) -->
+											<span class="fa fa-star checked"></span>
+											<!-- ELSE -->
+											<span class="fa fa-star"></span>
+											<!-- ENDIF -->
+											<!-- IF (BEST_SELLING_PRODUCTS_8.rating >= 3.5) -->
+											<span class="fa fa-star checked"></span>
+											<!-- ELSE -->
+											<span class="fa fa-star"></span>
+											<!-- ENDIF -->
+											<!-- IF (BEST_SELLING_PRODUCTS_8.rating >= 4.5) -->
+											<span class="fa fa-star checked"></span>
+											<!-- ELSE -->
+											<span class="fa fa-star"></span>
+											<!-- ENDIF -->
+										</div>
+										<div class="entry-meta">
+									<span class="day">{BEST_SELLING_PRODUCTS_8.price}</span>
+									<span class="month"><small><del>{BEST_SELLING_PRODUCTS_8.special}</del></small></span>
+										</div>
+									</header>
+								</div>
+								<div class="panel-bottom">
+									<a href="{BEST_SELLING_PRODUCTS_8.href}" class="btn btn-xs btn-link" data-original-title="" title="">READ MORE</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="item">
+							<div class="panel panel-post">
+								<div class="content-post">
+									<img src="{BEST_SELLING_PRODUCTS_9.thumb}">
+								</div>
+								<div class="title">
+									<header class="entry-header text-left">
+										<h6 class="inverse-font">{BEST_SELLING_PRODUCTS_9.name}</h6>
+										<div>
+											<!-- IF (BEST_SELLING_PRODUCTS_9.rating >= 0.5) -->
+											<span class="fa fa-star checked"></span>
+											<!-- ELSE -->
+											<span class="fa fa-star"></span>
+											<!-- ENDIF -->
+											<!-- IF (BEST_SELLING_PRODUCTS_9.rating >= 1.5) -->
+											<span class="fa fa-star checked"></span>
+											<!-- ELSE -->
+											<span class="fa fa-star"></span>
+											<!-- ENDIF -->
+											<!-- IF (BEST_SELLING_PRODUCTS_9.rating >= 2.5) -->
+											<span class="fa fa-star checked"></span>
+											<!-- ELSE -->
+											<span class="fa fa-star"></span>
+											<!-- ENDIF -->
+											<!-- IF (BEST_SELLING_PRODUCTS_9.rating >= 3.5) -->
+											<span class="fa fa-star checked"></span>
+											<!-- ELSE -->
+											<span class="fa fa-star"></span>
+											<!-- ENDIF -->
+											<!-- IF (BEST_SELLING_PRODUCTS_9.rating >= 4.5) -->
+											<span class="fa fa-star checked"></span>
+											<!-- ELSE -->
+											<span class="fa fa-star"></span>
+											<!-- ENDIF -->
+										</div>
+										<div class="entry-meta">
+									<span class="day">{BEST_SELLING_PRODUCTS_9.price}</span>
+									<span class="month"><small><del>{BEST_SELLING_PRODUCTS_9.special}</del></small></span>
+										</div>
+									</header>
+								</div>
+								<div class="panel-bottom">
+									<a href="{BEST_SELLING_PRODUCTS_9.href}" class="btn btn-xs btn-link" data-original-title="" title="">READ MORE</a>
+								</div>
+							</div>
+						</div>
+			</div>
+		 <!-- <div class="col-md-12">
          <button class="btn btn-default btn-block btn-lazy">LOAD MORE POSTS</button>
-		 </div>
+		 </div> -->
         </div>
+				<script>
+					// some function that depends on bootstrap and jquery
+					head.ready(function () {
+						$(".owl-carousel").owlCarousel({
+							margin: 10,
+							nav: true,
+							navText: ["<div class='nav-button owl-prev'>‹</div>", "<div class='nav-button owl-next'>›</div>"],
+							responsive: {
+								0: {
+									items: 2
+								},
+								600: {
+									items: 3
+								},
+								1000: {
+									items: 4
+								}
+							}
+						});
+					});
+				</script>
 <!-- Recent Lazy Topics Loader Section -->

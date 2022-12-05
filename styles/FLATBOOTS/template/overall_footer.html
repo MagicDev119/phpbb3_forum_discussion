@@ -12,7 +12,11 @@
 
 	<section class="section-page">
         <div id="rtblock" class="container">
-            <!-- IF .fltl --><!-- EVENT fltl --><!-- ELSE --><!-- INCLUDE addons/recent_topics_body.html --><!-- ENDIF -->
+					<!-- IF .fltl -->
+					<!-- EVENT fltl -->
+					<!-- ELSE -->
+					<!-- INCLUDE addons/recent_topics_body.html -->
+					<!-- ENDIF -->
         </div>
     </section>
 
@@ -235,7 +239,7 @@
 
 <script>
 // this loads jquery asynchronously & in parallel
-head.load("{T_THEME_PATH}/vendors/jquery-1.12.4.min.js", "{T_THEME_PATH}/vendors/bootstrap/336/js/bootstrap.min.js", "{T_THEME_PATH}/vendors/forum_fn.min.js");
+head.load("{T_THEME_PATH}/vendors/jquery-1.12.4.min.js", "{T_THEME_PATH}/vendors/bootstrap/336/js/bootstrap.min.js", "{T_THEME_PATH}/vendors/forum_fn.min.js", "{T_THEME_PATH}/vendors/owl-carousel/owl.carousel.min.js");
 </script>
 
 <!-- we use this event to load the JS scripts properly via the extension system -->
@@ -319,6 +323,8 @@ var coll = document.getElementsByClassName("footer-list-dropdown");
 			}
 		});
 	}
+	if(window.location.href.indexOf('ucp.php') != -1 || window.location.href.indexOf('memberlist.php') != -1)
+		window.scrollTo(0, document.getElementById('page-body').offsetTop)
 </script>
 </body>
 </html>

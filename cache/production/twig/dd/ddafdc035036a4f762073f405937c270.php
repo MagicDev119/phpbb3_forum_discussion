@@ -37,19 +37,21 @@ class __TwigTemplate_8aacabd7dc0780c8b88a2b472f27fc81 extends \Twig\Template
         echo "<div class=\"mastbottom\">
 \t<div class=\"container\">
 \t\t<div class=\"row\">
-\t\t\t<div class=\"col-md-9\">
-\t\t      <p class=\"call-to-action\">";
+\t\t\t";
+        // line 4
+        $location = "addons/recent_topics_body.html";
+        $namespace = false;
+        if (strpos($location, '@') === 0) {
+            $namespace = substr($location, 1, strpos($location, '/') - 1);
+            $previous_look_up_order = $this->env->getNamespaceLookUpOrder();
+            $this->env->setNamespaceLookUpOrder(array($namespace, '__main__'));
+        }
+        $this->loadTemplate("addons/recent_topics_body.html", "addons/call_to_action_body.html", 4)->display($context);
+        if ($namespace) {
+            $this->env->setNamespaceLookUpOrder($previous_look_up_order);
+        }
         // line 5
-        echo $this->extensions['phpbb\template\twig\extension']->lang("CALL_TO_ACTION_FOOTER");
-        echo "</p>
-\t\t\t</div>
-\t\t\t<div class=\"col-md-3\">
-\t\t\t  <a href=\"http://goo.gl/LvmwlF\" class=\"btn btn-xl btn-danger pull-right\" title=\"\">";
-        // line 8
-        echo $this->extensions['phpbb\template\twig\extension']->lang("PURCHASE_NOW_BTN");
-        echo "</a>
-\t\t\t</div>
-\t\t</div>
+        echo "\t\t</div>
 \t</div>
 </div>";
     }
@@ -66,7 +68,7 @@ class __TwigTemplate_8aacabd7dc0780c8b88a2b472f27fc81 extends \Twig\Template
 
     public function getDebugInfo()
     {
-        return array (  49 => 8,  43 => 5,  37 => 1,);
+        return array (  54 => 5,  42 => 4,  37 => 1,);
     }
 
     public function getSourceContext()

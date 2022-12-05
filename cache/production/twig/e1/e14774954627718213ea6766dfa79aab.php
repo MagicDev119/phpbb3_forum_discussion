@@ -65,10 +65,16 @@ class __TwigTemplate_7f85d52bbebe52bbe0201322ae14043f extends \Twig\Template
         echo "
 \t<section class=\"section-page\">
         <div id=\"rtblock\" class=\"container\">
-            ";
+\t\t\t\t\t";
         // line 15
         if (twig_length_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["loops"] ?? null), "fltl", [], "any", false, false, false, 15))) {
+            // line 16
+            echo "\t\t\t\t\t";
+            // line 17
+            echo "\t\t\t\t\t";
         } else {
+            // line 18
+            echo "\t\t\t\t\t";
             $location = "addons/recent_topics_body.html";
             $namespace = false;
             if (strpos($location, '@') === 0) {
@@ -76,29 +82,31 @@ class __TwigTemplate_7f85d52bbebe52bbe0201322ae14043f extends \Twig\Template
                 $previous_look_up_order = $this->env->getNamespaceLookUpOrder();
                 $this->env->setNamespaceLookUpOrder(array($namespace, '__main__'));
             }
-            $this->loadTemplate("addons/recent_topics_body.html", "overall_footer.html", 15)->display($context);
+            $this->loadTemplate("addons/recent_topics_body.html", "overall_footer.html", 18)->display($context);
             if ($namespace) {
                 $this->env->setNamespaceLookUpOrder($previous_look_up_order);
             }
+            // line 19
+            echo "\t\t\t\t\t";
         }
-        // line 16
+        // line 20
         echo "        </div>
     </section>
 
 ";
-        // line 19
+        // line 23
         echo "\t
   ";
-        // line 20
+        // line 24
         if (($context["FLATBOOTS_MINI_CMS_ENABLED"] ?? null)) {
-            // line 21
+            // line 25
             echo "     ";
-            // line 22
+            // line 26
             echo "  ";
         } else {
             echo " 
 \t";
-            // line 23
+            // line 27
             $location = "addons/call_to_action_body.html";
             $namespace = false;
             if (strpos($location, '@') === 0) {
@@ -106,25 +114,25 @@ class __TwigTemplate_7f85d52bbebe52bbe0201322ae14043f extends \Twig\Template
                 $previous_look_up_order = $this->env->getNamespaceLookUpOrder();
                 $this->env->setNamespaceLookUpOrder(array($namespace, '__main__'));
             }
-            $this->loadTemplate("addons/call_to_action_body.html", "overall_footer.html", 23)->display($context);
+            $this->loadTemplate("addons/call_to_action_body.html", "overall_footer.html", 27)->display($context);
             if ($namespace) {
                 $this->env->setNamespaceLookUpOrder($previous_look_up_order);
             }
-            // line 24
+            // line 28
             echo "  ";
         }
-        // line 25
+        // line 29
         echo "  
 \t
 \t";
-        // line 27
+        // line 31
         if (($context["FLATBOOTS_MINI_CMS_ENABLED"] ?? null)) {
-            // line 28
+            // line 32
             echo "\t\t";
-            // line 29
+            // line 33
             echo "\t";
         } else {
-            // line 30
+            // line 34
             echo "\t<div class=\"footer-block new-customize-wellnessherbs\">
 \t\t<div class=\"container\">
 \t\t\t<div class=\"footer-list-block\">
@@ -132,7 +140,7 @@ class __TwigTemplate_7f85d52bbebe52bbe0201322ae14043f extends \Twig\Template
 \t\t\t\t\t<div class=\"col-md-4\">
 \t\t\t\t\t\t<a href=\"https://www.wellnessherbs.com/\" class=\"footer-logo\">
 \t\t\t\t\t\t\t<img src=\"";
-            // line 36
+            // line 40
             echo ($context["ROOT_PATH"] ?? null);
             echo "images/heavenly-logo-dark.svg\" src=\"";
             echo ($context["UPLOAD_ICON_SRC"] ?? null);
@@ -285,12 +293,12 @@ class __TwigTemplate_7f85d52bbebe52bbe0201322ae14043f extends \Twig\Template
 \t</div>
 \t";
         }
-        // line 184
+        // line 188
         echo "
 <a id=\"totop\" class=\"top-flat\" href=\"\" onclick=\"return false;\" style=\"display:none;\" aria-label=\"to-top\"></a>
 
 <div class=\"hidden\">";
-        // line 187
+        // line 191
         if ( !($context["S_IS_BOT"] ?? null)) {
             echo ($context["RUN_CRON_TASK"] ?? null);
         }
@@ -299,7 +307,7 @@ class __TwigTemplate_7f85d52bbebe52bbe0201322ae14043f extends \Twig\Template
 <!-- injected via core and ajax JS for the return confirmation actions -->
    <div id=\"page-footer\">
 \t<div id=\"darkenwrapper\" data-ajax-error-title=\"";
-        // line 191
+        // line 195
         echo $this->extensions['phpbb\template\twig\extension']->lang("AJAX_ERROR_TITLE");
         echo "\" data-ajax-error-text=\"";
         echo $this->extensions['phpbb\template\twig\extension']->lang("AJAX_ERROR_TEXT");
@@ -314,7 +322,7 @@ class __TwigTemplate_7f85d52bbebe52bbe0201322ae14043f extends \Twig\Template
 \t</div>
 
 \t<div id=\"phpbb_alert\" class=\"alert alert-default phpbb_alert\" data-l-err=\"";
-        // line 195
+        // line 199
         echo $this->extensions['phpbb\template\twig\extension']->lang("ERROR");
         echo "\" data-l-timeout-processing-req=\"";
         echo $this->extensions['phpbb\template\twig\extension']->lang("TIMEOUT_PROCESSING_REQ");
@@ -332,39 +340,39 @@ class __TwigTemplate_7f85d52bbebe52bbe0201322ae14043f extends \Twig\Template
 <!-- injected via core and ajax JS for the return confirmation actions -->
 
 ";
-        // line 208
+        // line 212
         if ((($context["S_USER_LOGGED_IN"] ?? null) && ((($context["SCRIPT_NAME"] ?? null) == "viewforum") || (($context["SCRIPT_NAME"] ?? null) == "viewtopic")))) {
-            // line 209
+            // line 213
             echo "\t<div class=\"modal fade\" id=\"BreadcrumbMap\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"BreadcrumbsLabel\">
 \t  <div class=\"modal-dialog\" role=\"document\">
 \t\t<div class=\"modal-content\">
 \t\t  <div class=\"modal-header\">
 \t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-label=\"Close\"><span class=\"awe-remove-circle\"></span></button>
 \t\t\t<h4 class=\"modal-title\" id=\"BreadcrumbsLabel\">";
-            // line 214
+            // line 218
             echo $this->extensions['phpbb\template\twig\extension']->lang("NAVIGATION");
             echo "</h4>
 \t\t  </div>
 \t\t  <div class=\"modal-body file-tree\">
 \t\t   <ul>
 \t\t\t<li class=\"root\"><a href=\"";
-            // line 218
+            // line 222
             echo ($context["U_INDEX"] ?? null);
             echo "\">";
             echo $this->extensions['phpbb\template\twig\extension']->lang("INDEX");
             echo "</a></li>
 \t\t\t";
-            // line 219
+            // line 223
             $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, ($context["loops"] ?? null), "navlinks", [], "any", false, false, false, 219));
+            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, ($context["loops"] ?? null), "navlinks", [], "any", false, false, false, 223));
             foreach ($context['_seq'] as $context["_key"] => $context["navlinks"]) {
-                // line 220
+                // line 224
                 echo "\t\t\t";
-                $context["NAVLINK_NAME"] = ((twig_get_attribute($this->env, $this->source, $context["navlinks"], "BREADCRUMB_NAME", [], "any", true, true, false, 220)) ? (_twig_default_filter(twig_get_attribute($this->env, $this->source, $context["navlinks"], "BREADCRUMB_NAME", [], "any", false, false, false, 220), twig_get_attribute($this->env, $this->source, $context["navlinks"], "FORUM_NAME", [], "any", false, false, false, 220))) : (twig_get_attribute($this->env, $this->source, $context["navlinks"], "FORUM_NAME", [], "any", false, false, false, 220)));
-                // line 221
+                $context["NAVLINK_NAME"] = ((twig_get_attribute($this->env, $this->source, $context["navlinks"], "BREADCRUMB_NAME", [], "any", true, true, false, 224)) ? (_twig_default_filter(twig_get_attribute($this->env, $this->source, $context["navlinks"], "BREADCRUMB_NAME", [], "any", false, false, false, 224), twig_get_attribute($this->env, $this->source, $context["navlinks"], "FORUM_NAME", [], "any", false, false, false, 224))) : (twig_get_attribute($this->env, $this->source, $context["navlinks"], "FORUM_NAME", [], "any", false, false, false, 224)));
+                // line 225
                 echo "\t\t    ";
-                $context["NAVLINK_LINK"] = ((twig_get_attribute($this->env, $this->source, $context["navlinks"], "U_BREADCRUMB", [], "any", true, true, false, 221)) ? (_twig_default_filter(twig_get_attribute($this->env, $this->source, $context["navlinks"], "U_BREADCRUMB", [], "any", false, false, false, 221), twig_get_attribute($this->env, $this->source, $context["navlinks"], "U_VIEW_FORUM", [], "any", false, false, false, 221))) : (twig_get_attribute($this->env, $this->source, $context["navlinks"], "U_VIEW_FORUM", [], "any", false, false, false, 221)));
-                // line 222
+                $context["NAVLINK_LINK"] = ((twig_get_attribute($this->env, $this->source, $context["navlinks"], "U_BREADCRUMB", [], "any", true, true, false, 225)) ? (_twig_default_filter(twig_get_attribute($this->env, $this->source, $context["navlinks"], "U_BREADCRUMB", [], "any", false, false, false, 225), twig_get_attribute($this->env, $this->source, $context["navlinks"], "U_VIEW_FORUM", [], "any", false, false, false, 225))) : (twig_get_attribute($this->env, $this->source, $context["navlinks"], "U_VIEW_FORUM", [], "any", false, false, false, 225)));
+                // line 226
                 echo "\t\t\t\t<li><a href=\"";
                 echo ($context["NAVLINK_LINK"] ?? null);
                 echo "\">";
@@ -375,7 +383,7 @@ class __TwigTemplate_7f85d52bbebe52bbe0201322ae14043f extends \Twig\Template
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['navlinks'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 224
+            // line 228
             echo "\t\t   </ul>
 \t\t    <i class=\"icon-compass fa fa-compass\"></i>
 \t\t  </div>
@@ -386,32 +394,34 @@ class __TwigTemplate_7f85d52bbebe52bbe0201322ae14043f extends \Twig\Template
 \t</div>
 ";
         }
-        // line 233
+        // line 237
         echo "
 ";
-        // line 234
-        // line 235
+        // line 238
+        // line 239
         echo "
 <script>
 // this loads jquery asynchronously & in parallel
 head.load(\"";
-        // line 238
+        // line 242
         echo ($context["T_THEME_PATH"] ?? null);
         echo "/vendors/jquery-1.12.4.min.js\", \"";
         echo ($context["T_THEME_PATH"] ?? null);
         echo "/vendors/bootstrap/336/js/bootstrap.min.js\", \"";
         echo ($context["T_THEME_PATH"] ?? null);
-        echo "/vendors/forum_fn.min.js\");
+        echo "/vendors/forum_fn.min.js\", \"";
+        echo ($context["T_THEME_PATH"] ?? null);
+        echo "/vendors/owl-carousel/owl.carousel.min.js\");
 </script>
 
 <!-- we use this event to load the JS scripts properly via the extension system -->
 ";
-        // line 242
+        // line 246
         $previous_look_up_order = $this->env->getNamespaceLookUpOrder();
         $this->env->setNamespaceLookUpOrder(array('phpbb_viglink', '__main__'));
         $this->env->loadTemplate('@phpbb_viglink/event/overall_footer_after.html')->display($context);
         $this->env->setNamespaceLookUpOrder($previous_look_up_order);
-        // line 243
+        // line 247
         echo "
 <!-- injected via a module or an include -->
 <script>
@@ -424,23 +434,23 @@ head.ready(function () {
     \$('#notification_list_button').click(function(){setTimeout(function(){\$(\".nano\").nanoScroller();},0);});\t
 });
 ";
-        // line 254
+        // line 258
         if (($context["PROVIDER_TEMPLATE_FILE"] ?? null)) {
-            // line 255
+            // line 259
             echo "head.ready(function(){!function(n){n(\".oauth-content ul > li\").each(function(){var i=n(this).find(\"a\").text();n(this).find(\"a\").prepend('<i class=\"'+i+'\"></i>')})}(jQuery)});
 ";
         }
-        // line 257
+        // line 261
         echo "// some function that depends on bootstrap and jquery
 ";
-        // line 258
+        // line 262
         if ( !($context["HIDE_FOOTER"] ?? null)) {
-            // line 259
+            // line 263
             echo "head.load(\"";
             echo ($context["T_THEME_PATH"] ?? null);
             echo "/vendors/twitterFetcher.min.js\");
 head.ready(\"twitterFetcher.min.js\",function(e){var e={profile:{screenName:\"";
-            // line 260
+            // line 264
             if (($context["FLATBOOTS_MINI_CMS_ENABLED"] ?? null)) {
                 echo ($context["TWITTER_SCREEN_NAME"] ?? null);
             } else {
@@ -449,28 +459,28 @@ head.ready(\"twitterFetcher.min.js\",function(e){var e={profile:{screenName:\"";
             echo "\"},domId:\"twitter-feed\",maxTweets:1,showUser:!1,useEmoji:1,showImages:!0,enableLinks:!0};twitterFetcher.fetch(e)});
 ";
         }
-        // line 262
+        // line 266
         if (($context["S_RECAPTCHA_AVAILABLE"] ?? null)) {
-            // line 263
+            // line 267
             echo "head.load(\"";
             echo ($context["T_THEME_PATH"] ?? null);
             echo "/vendors/inv-recaptcha.js\");
 ";
         }
-        // line 265
+        // line 269
         echo "</script>
 
 <!-- injected via a module or an include -->
 
 ";
-        // line 269
-        echo twig_get_attribute($this->env, $this->source, ($context["definition"] ?? null), "SCRIPTS", [], "any", false, false, false, 269);
+        // line 273
+        echo twig_get_attribute($this->env, $this->source, ($context["definition"] ?? null), "SCRIPTS", [], "any", false, false, false, 273);
         echo "
 
 ";
-        // line 271
+        // line 275
         if (($context["S_PLUPLOAD"] ?? null)) {
-            // line 272
+            // line 276
             $location = "plupload.html";
             $namespace = false;
             if (strpos($location, '@') === 0) {
@@ -478,20 +488,20 @@ head.ready(\"twitterFetcher.min.js\",function(e){var e={profile:{screenName:\"";
                 $previous_look_up_order = $this->env->getNamespaceLookUpOrder();
                 $this->env->setNamespaceLookUpOrder(array($namespace, '__main__'));
             }
-            $this->loadTemplate("plupload.html", "overall_footer.html", 272)->display($context);
+            $this->loadTemplate("plupload.html", "overall_footer.html", 276)->display($context);
             if ($namespace) {
                 $this->env->setNamespaceLookUpOrder($previous_look_up_order);
             }
         }
-        // line 274
+        // line 278
         echo "
 ";
-        // line 275
-        // line 276
+        // line 279
+        // line 280
         echo "
 <!-- Google Analytics here -->
 ";
-        // line 278
+        // line 282
         echo ($context["GOOGLE_ANALYTICS"] ?? null);
         echo "
 
@@ -537,6 +547,8 @@ var coll = document.getElementsByClassName(\"footer-list-dropdown\");
 \t\t\t}
 \t\t});
 \t}
+\tif(window.location.href.indexOf('ucp.php') != -1 || window.location.href.indexOf('memberlist.php') != -1)
+\t\twindow.scrollTo(0, document.getElementById('page-body').offsetTop)
 </script>
 </body>
 </html>";
@@ -554,7 +566,7 @@ var coll = document.getElementsByClassName(\"footer-list-dropdown\");
 
     public function getDebugInfo()
     {
-        return array (  495 => 278,  491 => 276,  490 => 275,  487 => 274,  474 => 272,  472 => 271,  467 => 269,  461 => 265,  455 => 263,  453 => 262,  444 => 260,  439 => 259,  437 => 258,  434 => 257,  430 => 255,  428 => 254,  415 => 243,  410 => 242,  399 => 238,  394 => 235,  393 => 234,  390 => 233,  379 => 224,  368 => 222,  365 => 221,  362 => 220,  358 => 219,  352 => 218,  345 => 214,  338 => 209,  336 => 208,  318 => 195,  303 => 191,  294 => 187,  289 => 184,  136 => 36,  128 => 30,  125 => 29,  123 => 28,  121 => 27,  117 => 25,  114 => 24,  102 => 23,  97 => 22,  95 => 21,  93 => 20,  90 => 19,  85 => 16,  70 => 15,  65 => 12,  51 => 10,  49 => 9,  46 => 8,  45 => 7,  38 => 2,  37 => 1,);
+        return array (  505 => 282,  501 => 280,  500 => 279,  497 => 278,  484 => 276,  482 => 275,  477 => 273,  471 => 269,  465 => 267,  463 => 266,  454 => 264,  449 => 263,  447 => 262,  444 => 261,  440 => 259,  438 => 258,  425 => 247,  420 => 246,  407 => 242,  402 => 239,  401 => 238,  398 => 237,  387 => 228,  376 => 226,  373 => 225,  370 => 224,  366 => 223,  360 => 222,  353 => 218,  346 => 213,  344 => 212,  326 => 199,  311 => 195,  302 => 191,  297 => 188,  144 => 40,  136 => 34,  133 => 33,  131 => 32,  129 => 31,  125 => 29,  122 => 28,  110 => 27,  105 => 26,  103 => 25,  101 => 24,  98 => 23,  93 => 20,  90 => 19,  77 => 18,  74 => 17,  72 => 16,  70 => 15,  65 => 12,  51 => 10,  49 => 9,  46 => 8,  45 => 7,  38 => 2,  37 => 1,);
     }
 
     public function getSourceContext()

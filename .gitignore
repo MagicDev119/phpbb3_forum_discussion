@@ -1,6 +1,7 @@
 *~
 /phpunit.xml
 /phpBB/cache/*
+/phpBB/cache
 !/phpBB/cache/.htaccess
 !/phpBB/cache/index.html
 /phpBB/composer.phar

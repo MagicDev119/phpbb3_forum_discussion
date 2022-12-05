@@ -187,53 +187,61 @@ class __TwigTemplate_d6a2b53468b1ea488a9c02f93a4e86f7 extends \Twig\Template
         echo "<!-- Fonts here below this comment -->
 <link rel=\"stylesheet\" href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600'>
 <link rel=\"stylesheet\" href='//fonts.googleapis.com/css?family=Asap+Condensed:600'>
+<link rel=\"stylesheet\" href='";
+        // line 39
+        echo ($context["T_THEME_PATH"] ?? null);
+        echo "/vendors/owl-carousel/owl.carousel.min.css'>
+<link rel=\"stylesheet\" href='";
+        // line 40
+        echo ($context["T_THEME_PATH"] ?? null);
+        echo "/vendors/owl-carousel/owl.theme.default.min.css'>
 
 <!-- CSS files start here -->
 <link rel=\"stylesheet\" href=\"";
-        // line 41
+        // line 43
         echo ($context["T_THEME_PATH"] ?? null);
         echo "/stylesheet.css\">
 ";
-        // line 42
+        // line 44
         if (($context["S_PLUPLOAD"] ?? null)) {
-            // line 43
+            // line 45
             echo "<link rel=\"stylesheet\" href=\"";
             echo ($context["T_THEME_PATH"] ?? null);
             echo "/plupload.css\">
 ";
         }
-        // line 45
-        // line 46
+        // line 47
+        // line 48
         echo "
 ";
-        // line 47
-        echo twig_get_attribute($this->env, $this->source, ($context["definition"] ?? null), "STYLESHEETS", [], "any", false, false, false, 47);
+        // line 49
+        echo twig_get_attribute($this->env, $this->source, ($context["definition"] ?? null), "STYLESHEETS", [], "any", false, false, false, 49);
         echo "
 
 <!-- Remove the conditional below to use the custom CSS without FLATBOOTS Mini CMS Extension -->
 <link rel=\"stylesheet\" href=\"";
-        // line 50
+        // line 52
         echo ($context["T_THEME_PATH"] ?? null);
         echo "/custom.css\">
 ";
-        // line 51
-        // line 52
+        // line 53
+        // line 54
         echo "<!-- CSS files stop here -->
 
 ";
-        // line 54
-        // line 55
+        // line 56
+        // line 57
         echo "
 <!-- magic dust -->
 <!-- //cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.load.min.js -->
 <script rel=\"preload\" as=\"script\" src=\"";
-        // line 58
+        // line 60
         echo ($context["T_THEME_PATH"] ?? null);
         echo "/vendors/head.load.min.js\"></script>
 
 </head>
 <body data-spy=\"scroll\" data-target=\".scrollspy\" id=\"phpbb\" class=\"section-";
-        // line 61
+        // line 63
         echo ($context["SCRIPT_NAME"] ?? null);
         echo " ";
         echo ($context["S_CONTENT_DIRECTION"] ?? null);
@@ -241,8 +249,8 @@ class __TwigTemplate_d6a2b53468b1ea488a9c02f93a4e86f7 extends \Twig\Template
         echo ($context["BODY_CLASS"] ?? null);
         echo "\">
 ";
-        // line 62
-        // line 63
+        // line 64
+        // line 65
         echo "
 <header class=\"header-block new-customize-wellnessherbs\">
 \t<div class=\"header-top\">
@@ -317,7 +325,7 @@ class __TwigTemplate_d6a2b53468b1ea488a9c02f93a4e86f7 extends \Twig\Template
 \t\t\t\t<div class=\"col-lg-3 col-md-2 col-sm-3 col-xs-3 right-padding logo-part-nav-left in-mobile\">
 \t\t\t\t\t<div class=\"bottom-header-left-panel\">
 \t\t\t\t\t\t<div class=\"logo-box\"> <a href=\"https://www.wellnessherbs.com/\"><img src=\"";
-        // line 136
+        // line 138
         echo ($context["ROOT_PATH"] ?? null);
         echo "images/heavenly-logo-dark.svg\"
 \t\t\t\t\t\t\t\t\talt=\"Heavenly Herbals | Organic Herbal Supplements for Complete Wellness\"></a> </div>
@@ -326,13 +334,13 @@ class __TwigTemplate_d6a2b53468b1ea488a9c02f93a4e86f7 extends \Twig\Template
 
 \t\t\t\t<div class=\"col-lg-5 col-md-5 col-sm-5 col-xs-12 mobile-search\">
 \t\t\t\t\t<form method=\"get\" action=\"";
-        // line 142
+        // line 144
         echo ($context["U_SEARCH"] ?? null);
         echo "\">
 \t\t\t\t\t\t<div class=\"search-box\">
 \t\t\t\t\t\t\t<div class=\"input-group\" id=\"search\">
 \t\t\t\t\t\t\t\t\t<input name=\"keywords\" id=\"keywords\" type=\"text\" title=\"";
-        // line 145
+        // line 147
         echo $this->extensions['phpbb\template\twig\extension']->lang("SEARCH_KEYWORDS");
         echo "\" class=\"form-control search-box\" name=\"search\" value=\"\" placeholder=\"";
         echo $this->extensions['phpbb\template\twig\extension']->lang("SEARCH");
@@ -351,11 +359,11 @@ class __TwigTemplate_d6a2b53468b1ea488a9c02f93a4e86f7 extends \Twig\Template
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t<script type=\"text/template\" role=\"isearch-container\">
 \t\t\t\t\t\t\t\t<div class=\"isearch-container\" role=\"isearch-container-";
-        // line 159
+        // line 161
         echo ($context["id"] ?? null);
         echo "\">
 \t\t\t\t\t\t\t\t\t\t";
-        // line 160
+        // line 162
         echo ($context["content"] ?? null);
         echo "
 \t\t\t\t\t\t\t\t</div>
@@ -364,7 +372,7 @@ class __TwigTemplate_d6a2b53468b1ea488a9c02f93a4e86f7 extends \Twig\Template
 \t\t\t\t\t\t\t<script type=\"text/template\" role=\"isearch-loading\">
 \t\t\t\t\t\t\t\t<div class=\"isearch-loading text-center\">
 \t\t\t\t\t\t\t\t\t\t<i class=\"fa fa-spin fa-circle-o-notch\"></i> ";
-        // line 166
+        // line 168
         echo ($context["text"] ?? null);
         echo "
 \t\t\t\t\t\t\t\t</div>
@@ -372,14 +380,14 @@ class __TwigTemplate_d6a2b53468b1ea488a9c02f93a4e86f7 extends \Twig\Template
 
 \t\t\t\t\t\t\t<script type=\"text/template\" role=\"isearch-nothing\">
 \t\t\t\t\t\t\t\t<div class=\"isearch-nothing text-center\">";
-        // line 171
+        // line 173
         echo ($context["text"] ?? null);
         echo "</div>
 \t\t\t\t\t\t\t</script>
 
 \t\t\t\t\t\t\t<script type=\"text/template\" role=\"isearch-more\">
 \t\t\t\t\t\t\t\t<a role=\"isearch-tab\" class=\"isearch-more text-center\" href=\"";
-        // line 175
+        // line 177
         echo ($context["href"] ?? null);
         echo "\">";
         echo ($context["text"] ?? null);
@@ -388,14 +396,14 @@ class __TwigTemplate_d6a2b53468b1ea488a9c02f93a4e86f7 extends \Twig\Template
 
 \t\t\t\t\t\t\t<script type=\"text/template\" role=\"isearch-price\">
 \t\t\t\t\t\t\t\t<span class=\"isearch-price-value\">";
-        // line 179
+        // line 181
         echo ($context["price"] ?? null);
         echo "</span>
 \t\t\t\t\t\t\t</script>
 
 \t\t\t\t\t\t\t<script type=\"text/template\" role=\"isearch-special\">
 \t\t\t\t\t\t\t\t<span class=\"isearch-price-value isearch-price-special\">";
-        // line 183
+        // line 185
         echo ($context["special"] ?? null);
         echo "</span><br /><span class=\"isearch-old-value\">";
         echo ($context["price"] ?? null);
@@ -404,12 +412,12 @@ class __TwigTemplate_d6a2b53468b1ea488a9c02f93a4e86f7 extends \Twig\Template
 
 \t\t\t\t\t\t\t<script type=\"text/template\" role=\"isearch-product\">
 \t\t\t\t\t\t\t\t<a role=\"isearch-tab\" href=\"";
-        // line 187
+        // line 189
         echo ($context["href"] ?? null);
         echo "\" class=\"isearch-product\">
 \t\t\t\t\t\t\t\t\t<div class=\"pull-left isearch-product-image\">
 \t\t\t\t\t\t\t\t\t\t<img src=\"";
-        // line 189
+        // line 191
         echo ($context["image"] ?? null);
         echo "\" alt=\"";
         echo ($context["alt"] ?? null);
@@ -418,18 +426,18 @@ class __TwigTemplate_d6a2b53468b1ea488a9c02f93a4e86f7 extends \Twig\Template
 \t\t\t\t\t\t\t\t\t<div class=\"row isearch-product-info\">
 \t\t            \t\t<div class=\"col-xs-8\">
 \t\t               \t\t<h4 class=\"isearch-heading-product\">";
-        // line 193
+        // line 195
         echo ($context["name"] ?? null);
         echo "</h4>
 \t\t\t\t\t\t\t\t\t\t\t<span class=\"isearch-model\">";
-        // line 194
+        // line 196
         echo ($context["model"] ?? null);
         echo "</span>
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t            \t\t<div class=\"col-xs-4 text-right\">
 \t\t\t\t\t\t\t\t\t\t\t<div class=\"isearch-price\">
 \t\t\t\t\t\t\t\t\t\t\t\t";
-        // line 198
+        // line 200
         echo ($context["price"] ?? null);
         echo "
 \t\t\t\t\t\t\t\t\t\t\t</div>
@@ -440,7 +448,7 @@ class __TwigTemplate_d6a2b53468b1ea488a9c02f93a4e86f7 extends \Twig\Template
 
 \t\t\t\t\t\t\t<script type=\"text/template\" role=\"isearch-suggestion\">
 \t\t\t\t\t\t\t\t<a role=\"isearch-tab\" href=\"";
-        // line 206
+        // line 208
         echo ($context["href"] ?? null);
         echo "\" class=\"isearch-suggestion\">";
         echo ($context["keyword"] ?? null);
@@ -464,29 +472,32 @@ class __TwigTemplate_d6a2b53468b1ea488a9c02f93a4e86f7 extends \Twig\Template
 \t\t\t\t\t\t\t\t<div class=\"top-header-nav\">
 \t\t\t\t\t\t\t\t\t<ul class=\"nav navbar-nav pull-right\">
 \t\t\t\t\t\t\t\t\t\t";
-        // line 225
+        // line 227
         if ( !($context["S_USER_LOGGED_IN"] ?? null)) {
-            // line 226
+            // line 228
             echo "\t\t\t\t\t\t\t\t\t\t<li><a href=\"";
             echo ($context["U_LOGIN_LOGOUT"] ?? null);
             echo "\"><span><i
 \t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"icon svg-icon-login\"></i></span><span
 \t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"header-text hidden-sm hidden-xs\">Login</span></a></li>
 \t\t\t\t\t\t\t\t\t\t<li><a href=\"";
-            // line 229
+            // line 231
             echo ($context["U_REGISTER"] ?? null);
             echo "\"><span><i
 \t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"icon svg-icon-register\"></i></span><span
 \t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"header-text hidden-sm hidden-xs\">Register</span></a></li>
 \t\t\t\t\t\t\t\t\t\t";
         } else {
-            // line 233
+            // line 235
             echo "\t\t\t\t\t\t\t\t\t\t<li>
 \t\t\t\t\t\t\t\t\t\t\t<a href=\"javascript:void(0)\" data-toggle=\"dropdown\">
 \t\t\t\t\t\t\t\t\t\t\t\t<span>
 \t\t\t\t\t\t\t\t\t\t\t\t\t<i class=\"icon icon-dashboard\"></i>
 \t\t\t\t\t\t\t\t\t\t\t\t</span>
-\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"header-text hidden-sm hidden-xs\">Dashboard</span>
+\t\t\t\t\t\t\t\t\t\t\t\t<span class=\"header-text hidden-sm hidden-xs\">";
+            // line 240
+            echo ($context["CURRENT_USERNAME_SIMPLE"] ?? null);
+            echo "</span>
 \t\t\t\t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t\t\t\t\t<ul class=\"dropdown-menu user-login-drop arrow-up header-icon-dropdown-menu\">
 \t\t\t\t\t\t\t\t\t\t\t\t<li>
@@ -495,44 +506,89 @@ class __TwigTemplate_d6a2b53468b1ea488a9c02f93a4e86f7 extends \Twig\Template
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"row\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<div class=\"col-md-7 col-xs-7\">
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t";
-            // line 246
+            // line 248
             if (($context["U_ACP"] ?? null)) {
                 echo "<a class=\"btn btn-info btn-sm btn-block\" href=\"";
                 echo ($context["U_ACP"] ?? null);
                 echo "\"><i
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"fa fa-user-md\"></i>&nbsp;";
-                // line 247
+                // line 249
                 echo $this->extensions['phpbb\template\twig\extension']->lang("ADMIN_PANEL_GENERAL");
                 echo "</a>";
             }
-            // line 248
+            // line 250
             echo "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t";
             if (($context["U_MCP"] ?? null)) {
                 echo "<a class=\"btn btn-warning btn-sm btn-block\" href=\"";
                 echo ($context["U_MCP"] ?? null);
                 echo "\"><i
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"fa fa-legal\"></i>&nbsp;";
-                // line 249
+                // line 251
                 echo $this->extensions['phpbb\template\twig\extension']->lang("MODERATOR_PANEL_GENERAL");
                 echo "</a>";
             }
-            // line 250
+            // line 252
             echo "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t\t\t\t</li>
+
+\t\t\t\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"";
+            // line 259
+            echo ($context["U_PROFILE"] ?? null);
+            echo "\" title=\"";
+            echo $this->extensions['phpbb\template\twig\extension']->lang("PROFILE");
+            echo "\" role=\"menuitem\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<i class=\"icon fa-sliders fa-fw\" aria-hidden=\"true\"></i><span>";
+            // line 260
+            echo $this->extensions['phpbb\template\twig\extension']->lang("PROFILE");
+            echo "</span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t\t\t";
+            // line 263
+            if (($context["U_USER_PROFILE"] ?? null)) {
+                // line 264
+                echo "\t\t\t\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"";
+                // line 265
+                echo ($context["U_USER_PROFILE"] ?? null);
+                echo "\" title=\"";
+                echo $this->extensions['phpbb\template\twig\extension']->lang("READ_PROFILE");
+                echo "\" role=\"menuitem\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<i class=\"icon fa-user fa-fw\" aria-hidden=\"true\"></i><span>";
+                // line 266
+                echo $this->extensions['phpbb\template\twig\extension']->lang("READ_PROFILE");
+                echo "</span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t\t\t\t\t";
+            }
+            // line 270
+            echo "\t\t\t\t\t\t\t\t\t\t\t\t
+\t\t\t\t\t\t\t\t\t\t\t\t<li class=\"separator\"></li>
+\t\t\t\t\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"";
+            // line 273
+            echo ($context["U_LOGIN_LOGOUT"] ?? null);
+            echo "\" title=\"";
+            echo $this->extensions['phpbb\template\twig\extension']->lang("LOGIN_LOGOUT");
+            echo "\" accesskey=\"x\" role=\"menuitem\">
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t<i class=\"icon fa-power-off fa-fw\" aria-hidden=\"true\"></i><span>";
+            // line 274
+            echo $this->extensions['phpbb\template\twig\extension']->lang("LOGIN_LOGOUT");
+            echo "</span>
+\t\t\t\t\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t\t\t\t</ul>
 \t\t\t\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t\t\t\t\t
-\t\t\t\t\t\t\t\t\t\t<li><a href=\"";
-            // line 258
-            echo ($context["U_LOGIN_LOGOUT"] ?? null);
-            echo "\"><span class=\"\"><i class=\"icon icon-log-out\"></i></span><span
-\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"header-text hidden-sm hidden-xs\">Logout</span></a></li>
+\t\t\t\t\t\t\t\t\t\t
 \t\t\t\t\t\t\t\t\t\t";
         }
-        // line 261
+        // line 282
         echo "\t\t\t\t\t\t\t\t\t\t<!-- <li class=\"hide-small\"><a href=\"https://www.wellnessherbs.com/wishlist\"><span><i
 \t\t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"icon svg-icon-wishlist\"></i></span><span
 \t\t\t\t\t\t\t\t\t\t\t\t\tclass=\"header-text hidden-sm hidden-xs\">Favorites</span></a></li> -->
@@ -571,11 +627,11 @@ class __TwigTemplate_d6a2b53468b1ea488a9c02f93a4e86f7 extends \Twig\Template
 </header>
 
 ";
-        // line 298
+        // line 319
         if ( !($context["HIDE_HEADER"] ?? null)) {
-            // line 299
+            // line 320
             if (($context["IN_BADGE"] ?? null)) {
-                // line 300
+                // line 321
                 $location = "@sitesplat_badge/header_badge_teaser.html";
                 $namespace = false;
                 if (strpos($location, '@') === 0) {
@@ -583,12 +639,12 @@ class __TwigTemplate_d6a2b53468b1ea488a9c02f93a4e86f7 extends \Twig\Template
                     $previous_look_up_order = $this->env->getNamespaceLookUpOrder();
                     $this->env->setNamespaceLookUpOrder(array($namespace, '__main__'));
                 }
-                $this->loadTemplate("@sitesplat_badge/header_badge_teaser.html", "overall_header.html", 300)->display($context);
+                $this->loadTemplate("@sitesplat_badge/header_badge_teaser.html", "overall_header.html", 321)->display($context);
                 if ($namespace) {
                     $this->env->setNamespaceLookUpOrder($previous_look_up_order);
                 }
             } else {
-                // line 302
+                // line 323
                 $location = "addons/header_teaser_body.html";
                 $namespace = false;
                 if (strpos($location, '@') === 0) {
@@ -596,17 +652,17 @@ class __TwigTemplate_d6a2b53468b1ea488a9c02f93a4e86f7 extends \Twig\Template
                     $previous_look_up_order = $this->env->getNamespaceLookUpOrder();
                     $this->env->setNamespaceLookUpOrder(array($namespace, '__main__'));
                 }
-                $this->loadTemplate("addons/header_teaser_body.html", "overall_header.html", 302)->display($context);
+                $this->loadTemplate("addons/header_teaser_body.html", "overall_header.html", 323)->display($context);
                 if ($namespace) {
                     $this->env->setNamespaceLookUpOrder($previous_look_up_order);
                 }
             }
         } else {
-            // line 305
+            // line 326
             echo "<div style=\"padding-top:30px;\" class=\"space-teaser\"></div>
 ";
         }
-        // line 307
+        // line 328
         echo "
 <div class=\"container\">
   <!-- start content -->
@@ -614,31 +670,31 @@ class __TwigTemplate_d6a2b53468b1ea488a9c02f93a4e86f7 extends \Twig\Template
 
 \t\t
     ";
-        // line 313
-        // line 314
+        // line 334
+        // line 335
         echo "\t<div class=\"breadcrumb-line clearfix\">
 \t\t<ul class=\"breadcrumb\" itemscope itemtype=\"https://schema.org/BreadcrumbList\">
 \t\t";
-        // line 316
+        // line 337
         $value = " itemtype=\"https://schema.org/ListItem\" itemprop=\"itemListElement\" itemscope";
         $context['definition']->set('MICRODATA', $value);
-        // line 317
+        // line 338
         echo "        ";
         $context["navlink_position"] = 1;
-        // line 318
+        // line 339
         echo "\t\t";
         if (($context["U_SITE_HOME"] ?? null)) {
-            // line 319
+            // line 340
             echo "\t\t   <li><a href=\"";
             echo ($context["U_SITE_HOME"] ?? null);
             echo "\" aria-label=\"";
             echo $this->extensions['phpbb\template\twig\extension']->lang("SITE_HOME");
             echo "\"><span class=\"icon fa fa-home\"></span></a></li>
 \t\t   ";
-            // line 320
-            // line 321
+            // line 341
+            // line 342
             echo "\t\t   <li ";
-            echo twig_get_attribute($this->env, $this->source, ($context["definition"] ?? null), "MICRODATA", [], "any", false, false, false, 321);
+            echo twig_get_attribute($this->env, $this->source, ($context["definition"] ?? null), "MICRODATA", [], "any", false, false, false, 342);
             echo "><a href=\"";
             echo ($context["U_SITE_HOME"] ?? null);
             echo "\" data-navbar-reference=\"home\" itemprop=\"item\"><span itemprop=\"name\">";
@@ -648,21 +704,21 @@ class __TwigTemplate_d6a2b53468b1ea488a9c02f93a4e86f7 extends \Twig\Template
             $context["navlink_position"] = (($context["navlink_position"] ?? null) + 1);
             echo "\" /></li>
 \t\t   ";
-            // line 322
+            // line 343
             echo " 
 \t\t";
         } else {
-            // line 324
+            // line 345
             echo "\t\t   <li><a href=\"";
             echo ($context["U_INDEX"] ?? null);
             echo "\" aria-label=\"";
             echo $this->extensions['phpbb\template\twig\extension']->lang("INDEX");
             echo "\"><span class=\"icon fa fa-home\"></span></a></li>
 \t\t   ";
-            // line 325
-            // line 326
+            // line 346
+            // line 347
             echo "\t\t   <li ";
-            echo twig_get_attribute($this->env, $this->source, ($context["definition"] ?? null), "MICRODATA", [], "any", false, false, false, 326);
+            echo twig_get_attribute($this->env, $this->source, ($context["definition"] ?? null), "MICRODATA", [], "any", false, false, false, 347);
             echo "><a href=\"";
             echo ($context["U_INDEX"] ?? null);
             echo "\" data-navbar-reference=\"index\" itemprop=\"item\"><span itemprop=\"name\">";
@@ -672,32 +728,32 @@ class __TwigTemplate_d6a2b53468b1ea488a9c02f93a4e86f7 extends \Twig\Template
             $context["navlink_position"] = (($context["navlink_position"] ?? null) + 1);
             echo "\" /></li>
 \t\t   ";
-            // line 327
+            // line 348
             echo " 
 \t\t";
         }
-        // line 329
+        // line 350
         echo "
 \t\t  ";
-        // line 330
+        // line 351
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, ($context["loops"] ?? null), "navlinks", [], "any", false, false, false, 330));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, ($context["loops"] ?? null), "navlinks", [], "any", false, false, false, 351));
         foreach ($context['_seq'] as $context["_key"] => $context["navlinks"]) {
-            // line 331
+            // line 352
             echo "\t\t   ";
-            $context["NAVLINK_NAME"] = ((twig_get_attribute($this->env, $this->source, $context["navlinks"], "BREADCRUMB_NAME", [], "any", true, true, false, 331)) ? (_twig_default_filter(twig_get_attribute($this->env, $this->source, $context["navlinks"], "BREADCRUMB_NAME", [], "any", false, false, false, 331), twig_get_attribute($this->env, $this->source, $context["navlinks"], "FORUM_NAME", [], "any", false, false, false, 331))) : (twig_get_attribute($this->env, $this->source, $context["navlinks"], "FORUM_NAME", [], "any", false, false, false, 331)));
-            // line 332
+            $context["NAVLINK_NAME"] = ((twig_get_attribute($this->env, $this->source, $context["navlinks"], "BREADCRUMB_NAME", [], "any", true, true, false, 352)) ? (_twig_default_filter(twig_get_attribute($this->env, $this->source, $context["navlinks"], "BREADCRUMB_NAME", [], "any", false, false, false, 352), twig_get_attribute($this->env, $this->source, $context["navlinks"], "FORUM_NAME", [], "any", false, false, false, 352))) : (twig_get_attribute($this->env, $this->source, $context["navlinks"], "FORUM_NAME", [], "any", false, false, false, 352)));
+            // line 353
             echo "\t\t   ";
-            $context["NAVLINK_LINK"] = ((twig_get_attribute($this->env, $this->source, $context["navlinks"], "U_BREADCRUMB", [], "any", true, true, false, 332)) ? (_twig_default_filter(twig_get_attribute($this->env, $this->source, $context["navlinks"], "U_BREADCRUMB", [], "any", false, false, false, 332), twig_get_attribute($this->env, $this->source, $context["navlinks"], "U_VIEW_FORUM", [], "any", false, false, false, 332))) : (twig_get_attribute($this->env, $this->source, $context["navlinks"], "U_VIEW_FORUM", [], "any", false, false, false, 332)));
-            // line 333
+            $context["NAVLINK_LINK"] = ((twig_get_attribute($this->env, $this->source, $context["navlinks"], "U_BREADCRUMB", [], "any", true, true, false, 353)) ? (_twig_default_filter(twig_get_attribute($this->env, $this->source, $context["navlinks"], "U_BREADCRUMB", [], "any", false, false, false, 353), twig_get_attribute($this->env, $this->source, $context["navlinks"], "U_VIEW_FORUM", [], "any", false, false, false, 353))) : (twig_get_attribute($this->env, $this->source, $context["navlinks"], "U_VIEW_FORUM", [], "any", false, false, false, 353)));
+            // line 354
             echo "\t\t   <li ";
-            echo twig_get_attribute($this->env, $this->source, ($context["definition"] ?? null), "MICRODATA", [], "any", false, false, false, 333);
+            echo twig_get_attribute($this->env, $this->source, ($context["definition"] ?? null), "MICRODATA", [], "any", false, false, false, 354);
             echo "><a itemprop=\"item\" href=\"";
             echo ($context["NAVLINK_LINK"] ?? null);
             echo "\"";
-            if (twig_get_attribute($this->env, $this->source, $context["navlinks"], "MICRODATA", [], "any", false, false, false, 333)) {
+            if (twig_get_attribute($this->env, $this->source, $context["navlinks"], "MICRODATA", [], "any", false, false, false, 354)) {
                 echo " ";
-                echo twig_get_attribute($this->env, $this->source, $context["navlinks"], "MICRODATA", [], "any", false, false, false, 333);
+                echo twig_get_attribute($this->env, $this->source, $context["navlinks"], "MICRODATA", [], "any", false, false, false, 354);
             }
             echo "><span itemprop=\"name\">";
             echo ($context["NAVLINK_NAME"] ?? null);
@@ -710,13 +766,13 @@ class __TwigTemplate_d6a2b53468b1ea488a9c02f93a4e86f7 extends \Twig\Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['navlinks'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 334
+        // line 355
         echo " 
 \t\t</ul>
 \t\t";
-        // line 336
+        // line 357
         if ((($context["S_USER_LOGGED_IN"] ?? null) && ((($context["SCRIPT_NAME"] ?? null) == "viewforum") || (($context["SCRIPT_NAME"] ?? null) == "viewtopic")))) {
-            // line 337
+            // line 358
             echo "\t\t<ul class=\"breadcrumb-buttons visible-xxs\">
 \t\t    <li>
 \t\t\t  <a href=\"#\" title=\"\" data-toggle=\"modal\" data-target=\"#BreadcrumbMap\">
@@ -726,24 +782,24 @@ class __TwigTemplate_d6a2b53468b1ea488a9c02f93a4e86f7 extends \Twig\Template
 \t\t</ul>
 \t\t";
         }
-        // line 345
+        // line 366
         echo "\t\t";
         echo "  
 \t</div>
     ";
-        // line 347
-        // line 348
+        // line 368
+        // line 369
         echo "\t
 \t<div id=\"page-body\">
 \t
 \t";
-        // line 351
+        // line 372
         if (((($context["S_BOARD_DISABLED"] ?? null) && ($context["S_USER_LOGGED_IN"] ?? null)) && (($context["U_MCP"] ?? null) || ($context["U_ACP"] ?? null)))) {
-            // line 352
+            // line 373
             echo "\t<div class=\"alert alert-warning fade in\">
 \t\t<button data-dismiss=\"alert\" class=\"close\"><span class=\"awe-remove-circle\"></span></button>
 \t\t<i class=\"fa fa-info\"></i>&nbsp;<strong>";
-            // line 354
+            // line 375
             echo $this->extensions['phpbb\template\twig\extension']->lang("INFORMATION");
             echo $this->extensions['phpbb\template\twig\extension']->lang("COLON");
             echo "</strong>&nbsp;";
@@ -752,10 +808,10 @@ class __TwigTemplate_d6a2b53468b1ea488a9c02f93a4e86f7 extends \Twig\Template
 \t</div>
 \t";
         }
-        // line 357
+        // line 378
         echo "\t
     ";
-        // line 358
+        // line 379
     }
 
     public function getTemplateName()
@@ -770,7 +826,7 @@ class __TwigTemplate_d6a2b53468b1ea488a9c02f93a4e86f7 extends \Twig\Template
 
     public function getDebugInfo()
     {
-        return array (  759 => 358,  756 => 357,  747 => 354,  743 => 352,  741 => 351,  736 => 348,  735 => 347,  730 => 345,  720 => 337,  718 => 336,  714 => 334,  693 => 333,  690 => 332,  687 => 331,  683 => 330,  680 => 329,  676 => 327,  664 => 326,  663 => 325,  656 => 324,  652 => 322,  640 => 321,  639 => 320,  632 => 319,  629 => 318,  626 => 317,  623 => 316,  619 => 314,  618 => 313,  610 => 307,  606 => 305,  592 => 302,  579 => 300,  577 => 299,  575 => 298,  536 => 261,  530 => 258,  520 => 250,  516 => 249,  509 => 248,  505 => 247,  499 => 246,  484 => 233,  477 => 229,  470 => 226,  468 => 225,  444 => 206,  433 => 198,  426 => 194,  422 => 193,  413 => 189,  408 => 187,  399 => 183,  392 => 179,  383 => 175,  376 => 171,  368 => 166,  359 => 160,  355 => 159,  336 => 145,  330 => 142,  321 => 136,  246 => 63,  245 => 62,  237 => 61,  231 => 58,  226 => 55,  225 => 54,  221 => 52,  220 => 51,  216 => 50,  210 => 47,  207 => 46,  206 => 45,  200 => 43,  198 => 42,  194 => 41,  187 => 36,  184 => 27,  178 => 25,  176 => 24,  173 => 23,  171 => 21,  154 => 20,  141 => 19,  130 => 18,  119 => 17,  108 => 16,  97 => 15,  86 => 14,  84 => 13,  66 => 12,  62 => 11,  59 => 10,  58 => 9,  54 => 8,  50 => 7,  40 => 2,  37 => 1,);
+        return array (  815 => 379,  812 => 378,  803 => 375,  799 => 373,  797 => 372,  792 => 369,  791 => 368,  786 => 366,  776 => 358,  774 => 357,  770 => 355,  749 => 354,  746 => 353,  743 => 352,  739 => 351,  736 => 350,  732 => 348,  720 => 347,  719 => 346,  712 => 345,  708 => 343,  696 => 342,  695 => 341,  688 => 340,  685 => 339,  682 => 338,  679 => 337,  675 => 335,  674 => 334,  666 => 328,  662 => 326,  648 => 323,  635 => 321,  633 => 320,  631 => 319,  592 => 282,  581 => 274,  575 => 273,  570 => 270,  563 => 266,  557 => 265,  554 => 264,  552 => 263,  546 => 260,  540 => 259,  531 => 252,  527 => 251,  520 => 250,  516 => 249,  510 => 248,  499 => 240,  492 => 235,  485 => 231,  478 => 228,  476 => 227,  452 => 208,  441 => 200,  434 => 196,  430 => 195,  421 => 191,  416 => 189,  407 => 185,  400 => 181,  391 => 177,  384 => 173,  376 => 168,  367 => 162,  363 => 161,  344 => 147,  338 => 144,  329 => 138,  254 => 65,  253 => 64,  245 => 63,  239 => 60,  234 => 57,  233 => 56,  229 => 54,  228 => 53,  224 => 52,  218 => 49,  215 => 48,  214 => 47,  208 => 45,  206 => 44,  202 => 43,  196 => 40,  192 => 39,  187 => 36,  184 => 27,  178 => 25,  176 => 24,  173 => 23,  171 => 21,  154 => 20,  141 => 19,  130 => 18,  119 => 17,  108 => 16,  97 => 15,  86 => 14,  84 => 13,  66 => 12,  62 => 11,  59 => 10,  58 => 9,  54 => 8,  50 => 7,  40 => 2,  37 => 1,);
     }
 
     public function getSourceContext()

@@ -36,6 +36,8 @@
 <!-- Fonts here below this comment -->
 <link rel="stylesheet" href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600'>
 <link rel="stylesheet" href='//fonts.googleapis.com/css?family=Asap+Condensed:600'>
+<link rel="stylesheet" href='{T_THEME_PATH}/vendors/owl-carousel/owl.carousel.min.css'>
+<link rel="stylesheet" href='{T_THEME_PATH}/vendors/owl-carousel/owl.theme.default.min.css'>
 
 <!-- CSS files start here -->
 <link rel="stylesheet" href="{T_THEME_PATH}/stylesheet.css">
@@ -235,7 +237,7 @@
 												<span>
 													<i class="icon icon-dashboard"></i>
 												</span>
-												<span class="header-text hidden-sm hidden-xs">Dashboard</span>
+												<span class="header-text hidden-sm hidden-xs">{CURRENT_USERNAME_SIMPLE}</span>
 											</a>
 											<ul class="dropdown-menu user-login-drop arrow-up header-icon-dropdown-menu">
 												<li>
@@ -252,11 +254,30 @@
 														</div>
 													</div>
 												</li>
+
+												<li>
+													<a href="{U_PROFILE}" title="{L_PROFILE}" role="menuitem">
+														<i class="icon fa-sliders fa-fw" aria-hidden="true"></i><span>{L_PROFILE}</span>
+													</a>
+												</li>
+												<!-- IF U_USER_PROFILE -->
+												<li>
+													<a href="{U_USER_PROFILE}" title="{L_READ_PROFILE}" role="menuitem">
+														<i class="icon fa-user fa-fw" aria-hidden="true"></i><span>{L_READ_PROFILE}</span>
+													</a>
+												</li>
+												<!-- ENDIF -->
+												
+												<li class="separator"></li>
+												<li>
+													<a href="{U_LOGIN_LOGOUT}" title="{L_LOGIN_LOGOUT}" accesskey="x" role="menuitem">
+														<i class="icon fa-power-off fa-fw" aria-hidden="true"></i><span>{L_LOGIN_LOGOUT}</span>
+													</a>
+												</li>
 											</ul>
 										</li>
 										
-										<li><a href="{U_LOGIN_LOGOUT}"><span class=""><i class="icon icon-log-out"></i></span><span
-													class="header-text hidden-sm hidden-xs">Logout</span></a></li>
+										
 										<!-- ENDIF -->
 										<!-- <li class="hide-small"><a href="https://www.wellnessherbs.com/wishlist"><span><i
 														class="icon svg-icon-wishlist"></i></span><span

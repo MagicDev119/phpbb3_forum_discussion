@@ -43,25 +43,13 @@ class __TwigTemplate_0d9daa4eea1eac2f9da7b9c50378e04a extends \Twig\Template
         // line 6
         if (((($context["TEASER_TITLE"] ?? null) != "") || (($context["TEASER_TEXT"] ?? null) != ""))) {
             // line 7
-            echo "\t\t\t\t\t<h1>";
-            echo ($context["TEASER_TITLE"] ?? null);
-            echo "</h1>
-\t\t\t\t\t<p>";
-            // line 8
-            echo ($context["TEASER_TEXT"] ?? null);
-            echo "</p>
+            echo "\t\t\t\t\t<h1>Homeopathy changes lives. Heavenly Herbals Incorporation empowers homeopathy worldwide.</h1>
+\t\t\t\t\t<p>Our mission is to inspire more people to embrace a natural approach to complete wellness.</p>
 \t\t\t\t\t";
         } else {
             // line 10
-            echo "\t\t\t\t\t<h1>";
-            echo $this->extensions['phpbb\template\twig\extension']->lang("FLATBOOTS_INTRO");
-            echo "&nbsp;<a class=\"label label-call\" href=\"https://getbootstrap.com/\">";
-            echo $this->extensions['phpbb\template\twig\extension']->lang("BOOTSTRAP_VERSION");
-            echo "</a></h1>
-\t\t\t\t\t<p>";
-            // line 11
-            echo $this->extensions['phpbb\template\twig\extension']->lang("FLATBOOTS_EXPLAIN");
-            echo "</p>
+            echo "\t\t\t\t\t<h1>Homeopathy changes lives. Heavenly Herbals Incorporation empowers homeopathy worldwide.</a></h1>
+\t\t\t\t\t<p>Our mission is to inspire more people to embrace a natural approach to complete wellness.</p>
 \t\t\t\t\t";
         }
         // line 13
@@ -90,7 +78,7 @@ class __TwigTemplate_0d9daa4eea1eac2f9da7b9c50378e04a extends \Twig\Template
 
     public function getDebugInfo()
     {
-        return array (  72 => 15,  68 => 13,  63 => 11,  56 => 10,  51 => 8,  46 => 7,  44 => 6,  37 => 1,);
+        return array (  60 => 15,  56 => 13,  51 => 10,  46 => 7,  44 => 6,  37 => 1,);
     }
 
     public function getSourceContext()
