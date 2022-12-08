@@ -22,11 +22,11 @@ include($phpbb_root_path . 'includes/functions_display.' . $phpEx);
 
 $mode = $request->variable('mode', '');
 
-if ($mode === 'contactadmin')
-{
-	define('SKIP_CHECK_BAN', true);
-	define('SKIP_CHECK_DISABLED', true);
-}
+// if ($mode === 'contactadmin')
+// {
+// 	define('SKIP_CHECK_BAN', true);
+// 	define('SKIP_CHECK_DISABLED', true);
+// }
 
 // Start session management
 $user->session_begin();
@@ -51,7 +51,8 @@ if ($mode == 'leaders')
 }
 
 // Check our mode...
-if (!in_array($mode, array('', 'group', 'viewprofile', 'email', 'contact', 'contactadmin', 'searchuser', 'team', 'livesearch')))
+// if (!in_array($mode, array('', 'group', 'viewprofile', 'email', 'contact', 'contactadmin', 'searchuser', 'team', 'livesearch')))
+if (!in_array($mode, array('', 'group', 'viewprofile', 'email', 'contact', 'searchuser', 'team', 'livesearch')))
 {
 	trigger_error('NO_MODE');
 }
@@ -59,7 +60,7 @@ if (!in_array($mode, array('', 'group', 'viewprofile', 'email', 'contact', 'cont
 switch ($mode)
 {
 	case 'email':
-	case 'contactadmin':
+	// case 'contactadmin':
 	break;
 
 	case 'livesearch':
@@ -887,7 +888,7 @@ switch ($mode)
 
 	break;
 
-	case 'contactadmin':
+	// case 'contactadmin':
 	case 'email':
 		if (!class_exists('messenger'))
 		{
@@ -905,10 +906,10 @@ switch ($mode)
 		{
 			$form_name = 'topic';
 		}
-		else if ($mode === 'contactadmin')
-		{
-			$form_name = 'admin';
-		}
+		// else if ($mode === 'contactadmin')
+		// {
+		// 	$form_name = 'admin';
+		// }
 		else
 		{
 			trigger_error('NO_EMAIL');
@@ -958,11 +959,11 @@ switch ($mode)
 			$navlink_name = $user->lang('EMAIL_TOPIC');
 			$navlink_url = append_sid("{$phpbb_root_path}memberlist.$phpEx", "mode=email&t=$topic_id");
 		}
-		else if ($mode === 'contactadmin')
-		{
-			$navlink_name = $user->lang('CONTACT_ADMIN');
-			$navlink_url = append_sid("{$phpbb_root_path}memberlist.$phpEx", "mode=contactadmin");
-		}
+		// else if ($mode === 'contactadmin')
+		// {
+		// 	$navlink_name = $user->lang('CONTACT_ADMIN');
+		// 	$navlink_url = append_sid("{$phpbb_root_path}memberlist.$phpEx", "mode=contactadmin");
+		// }
 
 		$template->assign_block_vars('navlinks', array(
 			'BREADCRUMB_NAME'	=> $navlink_name,

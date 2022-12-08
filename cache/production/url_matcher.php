@@ -92,11 +92,6 @@ class phpbb_url_matcher extends Symfony\Component\Routing\Matcher\UrlMatcher
             return array (  '_controller' => 'phpbb.help.controller.bbcode:handle',  '_route' => 'phpbb_help_bbcode_controller',);
         }
 
-        // phpbb_help_faq_controller
-        if ('/help/faq' === $pathinfo) {
-            return array (  '_controller' => 'phpbb.help.controller.faq:handle',  '_route' => 'phpbb_help_faq_controller',);
-        }
-
         // phpbb_report_pm_controller
         if (0 === strpos($pathinfo, '/pm') && preg_match('#^/pm/(?P<id>\\d+)/report$#sD', $pathinfo, $matches)) {
             $ret = $this->mergeDefaults(array_replace($matches, ['_route' => 'phpbb_report_pm_controller']), array (  '_controller' => 'phpbb.report.controller:handle',  'mode' => 'pm',));

@@ -383,8 +383,8 @@ while ($row = $db->sql_fetchrow($result))
 			if ($row['session_page'] === 'app.' . $phpEx . '/help/faq' ||
 				$row['session_page'] === 'app.' . $phpEx . '/help/bbcode')
 			{
-				$location = $user->lang['VIEWING_FAQ'];
-				$location_url = $controller_helper->route('phpbb_help_faq_controller');
+				// $location = $user->lang['VIEWING_FAQ'];
+				// $location_url = $controller_helper->route('phpbb_help_faq_controller');
 			}
 		break;
 	}

@@ -174,6 +174,42 @@ function user_update_name($old_name, $new_name)
 	$cache->destroy('sql', MODERATOR_CACHE_TABLE);
 }
 
+function add_user_to_wellness($data) {
+	$postfields = array(
+		'firstname' => $data['firstname'],
+		'lastname' => $data['lastname'],
+		'email' => $data['email'],
+		'telephone' => $data['telephone'],
+		'password' => $data['password'],
+		'confirm_password' => $data['password'],
+		'agree_terms' => 1
+	);
+	$ch = curl_init();
+	$headers = array(
+		'username: forum-user',
+		'x-api-key: zIU8ns8BqDfqvSBZDsN7DLMSVWY8f0uAo5SSQRdGnDsgmu5oRHccmmr6hIDV4ZzlBTiO3ckEcGY6vyflDQLVdTqlGBeAxGgyDtoemiIyDwTXoJoljFYjlJsdHLtS45qNx3DC74FaOrlppMX8vsIPuBDxLSNs5djGUpaGwS1BChEhD3itI1aWczrXIs7AOTr1duSWqJrZIhT8EGRmAkQjCzaefjnzz0ql5Gv5ya8jSSpSjOh1t8yRmmIKdWQnGlNI'
+	);
+	
+	curl_setopt($ch, CURLOPT_URL, 'https://www.wellnessherbs.com/index.php?route=api/customer_login/register');
+	curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+	curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+	curl_setopt($ch, CURLOPT_POST, 1);
+	// Edit: prior variable $postFields should be $postfields;
+	curl_setopt($ch, CURLOPT_POSTFIELDS, $postfields);
+	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0); // On dev server only!
+	$result = curl_exec($ch);
+	try {
+		$result = json_decode($result);
+		if (!$result) {
+			$result = (object) array('code' => 403);
+		}
+	}
+	catch(Exception $e) {
+		$result = (object) array('code' => 403);
+	}
+	return $result;
+}
 /**
 * Adds an user
 *
@@ -197,6 +233,20 @@ function user_add($user_row, $cp_data = false, $notifications_data = null)
 	if (empty($username_clean))
 	{
 		return false;
+	}
+
+	$userdata = array(
+		'firstname' => $user_row['firstname'],
+		'lastname' => $user_row['lastname'],
+		'email' => $user_row['user_email'],
+		'telephone' => $user_row['telephone'],
+		'password' => $user_row['new_password']
+	);
+
+	$apiResult = add_user_to_wellness($userdata);
+
+	if ($apiResult->code != 200) {
+		return $apiResult;
 	}
 
 	$sql_ary = array(
@@ -271,6 +321,7 @@ function user_add($user_row, $cp_data = false, $notifications_data = null)
 	{
 		foreach ($remaining_vars as $key)
 		{
+			if ($key == 'firstname' || $key == 'lastname' || $key == 'telephone' || $key == 'new_password') continue;
 			$sql_ary[$key] = $user_row[$key];
 		}
 	}

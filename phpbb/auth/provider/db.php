@@ -83,7 +83,13 @@ class db extends base
 	{
 		$postfields = array('email' => $username, 'password' => $password);
 		$ch = curl_init();
-		curl_setopt($ch, CURLOPT_URL, 'https://www.staging.wellnessherbs.com/index.php?route=api/customer_login/login');
+		$headers = array(
+			'username: forum-user',
+			'x-api-key: zIU8ns8BqDfqvSBZDsN7DLMSVWY8f0uAo5SSQRdGnDsgmu5oRHccmmr6hIDV4ZzlBTiO3ckEcGY6vyflDQLVdTqlGBeAxGgyDtoemiIyDwTXoJoljFYjlJsdHLtS45qNx3DC74FaOrlppMX8vsIPuBDxLSNs5djGUpaGwS1BChEhD3itI1aWczrXIs7AOTr1duSWqJrZIhT8EGRmAkQjCzaefjnzz0ql5Gv5ya8jSSpSjOh1t8yRmmIKdWQnGlNI'
+		);
+		
+		curl_setopt($ch, CURLOPT_URL, 'https://www.wellnessherbs.com/index.php?route=api/customer_login/login');
+		curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 		curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
 		curl_setopt($ch, CURLOPT_POST, 1);

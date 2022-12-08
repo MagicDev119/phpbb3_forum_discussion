@@ -1149,6 +1149,14 @@ a:visited {
   background: linear-gradient(45deg, #008000 40%, #ff00ff);
 }
 
+.owl-carousel .nav-button {
+  height: 50px;
+  width: 25px;
+  cursor: pointer;
+  position: absolute;
+  top: 177px !important;
+}
+
 @media (min-width: 320px) {
   .flat-header {
     height: 106px;
@@ -1161,6 +1169,10 @@ a:visited {
     margin: auto !important;
   }
 
+  .owl-carousel .nav-button {
+    top: 100px !important;
+  }
+  
   .wrapper-head {
     margin-top: 16px;
   }
@@ -1206,6 +1218,10 @@ a:visited {
     font-size: 11px;
   }
 
+  .owl-carousel .nav-button {
+    top: 112px !important;
+  }
+  
   .flat-header h1 {
     font-size: 12px;
   }
@@ -1247,8 +1263,12 @@ a:visited {
     font-size: 11px;
   }
 
+  .owl-carousel .nav-button {
+    top: 125px !important;
+  }
+  
   .flat-header h1 {
-    font-size: 15px;
+    font-size: 14px;
   }
 
   .wrapper-head {
@@ -1282,7 +1302,11 @@ a:visited {
     padding-left: 20px;
   }
   .flat-header P {
-    font-size: 9px;
+    font-size: 19px;
+  }
+
+  .owl-carousel .nav-button {
+    top: 151px !important;
   }
 
   .flat-header h1 {
@@ -1328,6 +1352,18 @@ a:visited {
     height: 300px;
   }
 
+  .owl-carousel .nav-button {
+    top: 154px !important;
+  }
+  
+  .flat-header P {
+    font-size: 23px;
+  }
+
+  .flat-header h1 {
+    font-size: 34px;
+  }
+  
   .wrapper-head {
     margin-top: 40px;
   }
@@ -1355,6 +1391,18 @@ a:visited {
     height: 390px;
   }
 
+  .owl-carousel .nav-button {
+    top: 177px !important;
+  }
+
+  .flat-header h1 {
+    font-size: 40px;
+  }
+
+  .flat-header P {
+    font-size: 28px;
+  }
+  
   .wrapper-head {
     margin-top: 54px;
   }
@@ -1446,14 +1494,6 @@ a:visited {
 
 .owl-carousel .item {
   text-align: center;
-}
-
-.owl-carousel .nav-button {
-  height: 50px;
-  width: 25px;
-  cursor: pointer;
-  position: absolute;
-  top: 110px !important;
 }
 
 .owl-carousel .owl-prev.disabled,

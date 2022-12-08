@@ -295,7 +295,7 @@ class __TwigTemplate_7f85d52bbebe52bbe0201322ae14043f extends \Twig\Template
         }
         // line 188
         echo "
-<a id=\"totop\" class=\"top-flat\" href=\"\" onclick=\"return false;\" style=\"display:none;\" aria-label=\"to-top\"></a>
+<!-- <a id=\"totop\" class=\"top-flat\" href=\"\" onclick=\"return false;\" style=\"display:none;\" aria-label=\"to-top\"></a> -->
 
 <div class=\"hidden\">";
         // line 191

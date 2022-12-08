@@ -33,31 +33,72 @@
 	 <p>{L_REG_COND}</p>
 	<!-- ENDIF -->
     
-<div class="row">
-<!-- EVENT ucp_register_credentials_before -->
-   <div class="col-md-6">
-	<div class="form-group">
-		<label for="username" class="control-label">{L_USERNAME}{L_COLON}</label><span class="help-block">{L_USERNAME_EXPLAIN}</span>
-		<div class="form-icon">
-			<input class="form-control input-lg" type="text" name="username" id="username" size="25" value="{USERNAME}" title="{L_USERNAME}" placeholder="{L_UCP_REG_USR_PLACEHOLDER}"/>
-		    <span class="fa fa-user login-form-icon"></span>
-		 </div> 
-		<div class="control-group"></div>
+	<div class="row">
+	<!-- EVENT ucp_register_credentials_before -->
+		<div class="col-md-6">
+			<div class="form-group">
+				<label for="firstname" class="control-label">First Name{L_COLON}</label><span
+					class="help-block">First Name must be between 1 and 32 characters</span>
+				<div class="form-icon">
+					<input class="form-control input-lg" type="text" name="firstname" id="firstname" size="35" value=""
+						title="FirstName" placeholder="Enter First name Here!" />
+					<span class="fa fa-user login-form-icon"></span>
+				</div>
+				<div class="control-group"></div>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="form-group">
+				<label for="lastname" class="control-label">Last Name{L_COLON}</label><span
+					class="help-block">Last Name must be between 1 and 32 characters</span>
+				<div class="form-icon">
+					<input class="form-control input-lg" type="text" name="lastname" id="lastname" size="25" value=""
+						title="LastName" placeholder="Enter Last name Here!" />
+					<span class="fa fa-user login-form-icon"></span>
+				</div>
+				<div class="control-group"></div>
+			</div>
+		</div>
 	</div>
-   </div>
- 
-   <div class="col-md-6">
-	<div class="form-group">
-		<label class="control-label" for="email">{L_EMAIL_ADDRESS}{L_COLON}</label><span class="help-block">{L_UCP_REGISTER_EMAIL_EXPLAIN}</span>
-          <div class="form-icon">
-		    <input class="form-control input-lg" type="text" name="email" id="email" size="25" maxlength="100" value="{EMAIL}" placeholder="{L_UCP_REG_EMAIL_PLACEHOLDER}" autocomplete="off"/>
-		    <span class="icon-moon-email login-form-icon"></span>
-		  </div>
-		  <div class="control-group"></div>
-	</div> 
-   </div> 
-</div>
-
+	<!-- <div class="row">
+		<div class="col-md-6">
+			<div class="form-group">
+				<label for="username" class="control-label">{L_USERNAME}{L_COLON}</label><span
+					class="help-block">{L_USERNAME_EXPLAIN}</span>
+				<div class="form-icon">
+					<input class="form-control input-lg" type="text" name="username" id="username" size="25" value="{USERNAME}"
+						title="{L_USERNAME}" placeholder="{L_UCP_REG_USR_PLACEHOLDER}" />
+					<span class="fa fa-user login-form-icon"></span>
+				</div>
+				<div class="control-group"></div>
+			</div>
+		</div>
+	</div> -->
+	<div class="row">
+		<div class="col-md-6">
+			<div class="form-group">
+				<label for="telephone" class="control-label">Telephone{L_COLON}</label><span class="help-block">Telephone must be between 3 and 32 characters!</span>
+				<div class="form-icon">
+					<input class="form-control input-lg" type="text" name="telephone" id="telephone" size="25" value="" title="Telephone"
+						placeholder="Enter Telephone number Here!" />
+					<span class="fa fa-user login-form-icon"></span>
+				</div>
+				<div class="control-group"></div>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="form-group">
+				<label class="control-label" for="email">{L_EMAIL_ADDRESS}{L_COLON}</label><span
+					class="help-block">{L_UCP_REGISTER_EMAIL_EXPLAIN}</span>
+				<div class="form-icon">
+					<input class="form-control input-lg" type="text" name="email" id="email" size="25" maxlength="100" value="{EMAIL}"
+						placeholder="{L_UCP_REG_EMAIL_PLACEHOLDER}" autocomplete="off" />
+					<span class="icon-moon-email login-form-icon"></span>
+				</div>
+				<div class="control-group"></div>
+			</div>
+		</div>
+	</div>
 <div class="row">   
    <div class="col-md-6">
 	<div class="form-group">
@@ -79,43 +120,11 @@
 		  </div>
 		  <div class="control-group"></div>
 	</div> 
+	<input type="hidden" name="lang" value="en" />
+	<input type="hidden" name="tz" value="UTC" />
    </div>
    <!-- EVENT ucp_register_credentials_after -->
 </div>
-
-<div class="row">
-  <div class="col-md-6">
-	<div class="form-group"> 
-	<div class="control-group">
-	   <label class="control-label" for="lang">{L_LANGUAGE}{L_COLON}</label>
-       <div>
-	    <select class="selectpicker" data-container="body" name="lang" id="lang" onchange="change_language(this.value); return false;" tabindex="6" title="{L_LANGUAGE}">{S_LANG_OPTIONS}</select>
-	</div> 
-	</div>
-	</div>
-  </div>
-
-  <div class="col-md-6">
-    <!-- /* from timezone_option.html */ -->	
-	<div class="control-group"> 
-		<label class="control-label" for="timezone">{L_BOARD_TIMEZONE}{L_COLON}</label>
-		<div class="controls controls-row"> 
-		<select class="tz_select selectpicker" data-container="body" data-width="auto" name="tz" id="timezone">
-			<option value="">{L_SELECT_TIMEZONE}</option>
-		<!-- BEGIN timezone_select -->
-			<optgroup label="{timezone_select.LABEL}" data-tz-value="{timezone_select.VALUE}">
-				<!-- BEGIN timezone_options -->
-				<option title="{timezone_select.timezone_options.TITLE}" value="{timezone_select.timezone_options.VALUE}"<!-- IF timezone_select.timezone_options.SELECTED --> selected="selected"<!-- ENDIF -->>{timezone_select.timezone_options.LABEL}</option>
-				<!-- END timezone_options -->
-			</optgroup>
-		<!-- END timezone_select -->
-		</select>
-		</div>
-	</div>
-	<!-- /* from timezone_option.html */ -->
-   </div>
-</div>
-	
 	
 <!-- EVENT ucp_register_profile_fields_before -->
 	<!-- IF .profile_fields -->

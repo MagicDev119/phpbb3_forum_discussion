@@ -3383,10 +3383,12 @@ function obtain_users_online($item_id = 0, $item = 'forum')
 
 function get_best_selling_products() {
 	$ch = curl_init();
-	curl_setopt($ch, CURLOPT_URL, 'https://www.staging.wellnessherbs.com/index.php?route=api/most_selling&limit=10');
+	curl_setopt($ch, CURLOPT_URL, 'https://www.wellnessherbs.com/index.php?route=api/most_selling&limit=10');
 	$headers = array(
 		'Accept: application/json',
 		'Content-Type: application/json',
+		'username: forum-user',
+		'x-api-key: zIU8ns8BqDfqvSBZDsN7DLMSVWY8f0uAo5SSQRdGnDsgmu5oRHccmmr6hIDV4ZzlBTiO3ckEcGY6vyflDQLVdTqlGBeAxGgyDtoemiIyDwTXoJoljFYjlJsdHLtS45qNx3DC74FaOrlppMX8vsIPuBDxLSNs5djGUpaGwS1BChEhD3itI1aWczrXIs7AOTr1duSWqJrZIhT8EGRmAkQjCzaefjnzz0ql5Gv5ya8jSSpSjOh1t8yRmmIKdWQnGlNI'
 	);
 	curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 	curl_setopt($ch, CURLOPT_HEADER, 0);
@@ -4058,7 +4060,7 @@ function page_header($page_title = '', $display_online_list = false, $item_id = 
 		'U_PROFILE'				=> append_sid("{$phpbb_root_path}ucp.$phpEx"),
 		'U_USER_PROFILE'		=> get_username_string('profile', $user->data['user_id'], $user->data['username'], $user->data['user_colour']),
 		'U_MODCP'				=> append_sid("{$phpbb_root_path}mcp.$phpEx", false, true, $user->session_id),
-		'U_FAQ'					=> $controller_helper->route('phpbb_help_faq_controller'),
+		// 'U_FAQ'					=> $controller_helper->route('phpbb_help_faq_controller'),
 		'U_SEARCH_SELF'			=> append_sid("{$phpbb_root_path}search.$phpEx", 'search_id=egosearch'),
 		'U_SEARCH_NEW'			=> append_sid("{$phpbb_root_path}search.$phpEx", 'search_id=newposts'),
 		'U_SEARCH_UNANSWERED'	=> append_sid("{$phpbb_root_path}search.$phpEx", 'search_id=unanswered'),

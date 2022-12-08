@@ -242,9 +242,15 @@ class ucp_register
 
 		$timezone = $config['board_timezone'];
 
+		$usernameTemp = explode('@', strtolower($request->variable('email', '')));
+		$usernameTemp = $usernameTemp[0];
+		
 		$data = array(
-			'username'			=> $request->variable('username', '', true),
+			'username'			=> $usernameTemp,
 			'new_password'		=> $request->variable('new_password', '', true),
+			'firstname'		=> $request->variable('firstname', '', true),
+			'lastname'		=> $request->variable('lastname', '', true),
+			'telephone'		=> $request->variable('telephone', '', true),
 			'password_confirm'	=> $request->variable('password_confirm', '', true),
 			'email'				=> strtolower($request->variable('email', '')),
 			'lang'				=> basename($request->variable('lang', $user->lang_name)),
@@ -382,6 +388,10 @@ class ucp_register
 
 				$user_row = array(
 					'username'				=> $data['username'],
+					'firstname'				=> $data['firstname'],
+					'lastname'				=> $data['lastname'],
+					'telephone'				=> $data['telephone'],
+					'new_password'			=> $data['new_password'],
 					'user_password'			=> $passwords_manager->hash($data['new_password']),
 					'user_email'			=> $data['email'],
 					'group_id'				=> (int) $group_id,
@@ -418,75 +428,134 @@ class ucp_register
 
 				// Register user...
 				$user_id = user_add($user_row, $cp_data);
+				
+				if (gettype($user_id) == 'object' || gettype($user_id) == 'array') {
+					$error= $user_id->errors;
+					$error[] = $user_id->message;
 
-				// This should not happen, because the required variables are listed above...
-				if ((bool) $user_id === false)
-				{
-					trigger_error('NO_USER', E_USER_ERROR);
-				}
-
-				// Okay, captcha, your job is done.
-				if ($config['enable_confirm'] && isset($captcha))
-				{
-					$captcha->reset();
-				}
-
-				if ($coppa && $config['email_enable'])
-				{
-					$message = $user->lang['ACCOUNT_COPPA'];
-					$email_template = 'coppa_welcome_inactive';
-				}
-				else if ($config['require_activation'] == USER_ACTIVATION_SELF && $config['email_enable'])
-				{
-					$message = $user->lang['ACCOUNT_INACTIVE'];
-					$email_template = 'user_welcome_inactive';
-				}
-				else if ($config['require_activation'] == USER_ACTIVATION_ADMIN && $config['email_enable'])
-				{
-					$message = $user->lang['ACCOUNT_INACTIVE_ADMIN'];
-					$email_template = 'admin_welcome_inactive';
-				}
-				else
-				{
-					$message = $user->lang['ACCOUNT_ADDED'];
-					$email_template = 'user_welcome';
-
-					// Autologin after registration
-					$user->session_create($user_id, 0, false, 1);
-				}
-
-				if ($config['email_enable'])
-				{
-					include_once($phpbb_root_path . 'includes/functions_messenger.' . $phpEx);
-
-					$messenger = new messenger(false);
-
-					$messenger->template($email_template, $data['lang']);
-
-					$messenger->to($data['email'], $data['username']);
-
-					$messenger->anti_abuse_headers($config, $user);
-
-					$messenger->assign_vars(array(
-						'WELCOME_MSG'	=> html_entity_decode(sprintf($user->lang['WELCOME_SUBJECT'], $config['sitename']), ENT_COMPAT),
-						'USERNAME'		=> html_entity_decode($data['username'], ENT_COMPAT),
-						'PASSWORD'		=> html_entity_decode($data['new_password'], ENT_COMPAT),
-						'U_ACTIVATE'	=> "$server_url/ucp.$phpEx?mode=activate&u=$user_id&k=$user_actkey")
-					);
-
-					if ($coppa)
+				} else {
+						
+					// This should not happen, because the required variables are listed above...
+					if ((bool) $user_id === false)
 					{
+						trigger_error('NO_USER', E_USER_ERROR);
+					}
+					
+					// Okay, captcha, your job is done.
+					if ($config['enable_confirm'] && isset($captcha))
+					{
+						$captcha->reset();
+					}
+
+					if ($coppa && $config['email_enable'])
+					{
+						$message = $user->lang['ACCOUNT_COPPA'];
+						$email_template = 'coppa_welcome_inactive';
+					}
+					else if ($config['require_activation'] == USER_ACTIVATION_SELF && $config['email_enable'])
+					{
+						$message = $user->lang['ACCOUNT_INACTIVE'];
+						$email_template = 'user_welcome_inactive';
+					}
+					else if ($config['require_activation'] == USER_ACTIVATION_ADMIN && $config['email_enable'])
+					{
+						$message = $user->lang['ACCOUNT_INACTIVE_ADMIN'];
+						$email_template = 'admin_welcome_inactive';
+					}
+					else
+					{
+						$message = $user->lang['ACCOUNT_ADDED'];
+						$email_template = 'user_welcome';
+
+						// Autologin after registration
+						$user->session_create($user_id, 0, false, 1);
+					}
+
+					if ($config['email_enable'])
+					{
+						include_once($phpbb_root_path . 'includes/functions_messenger.' . $phpEx);
+
+						$messenger = new messenger(false);
+
+						$messenger->template($email_template, $data['lang']);
+
+						$messenger->to($data['email'], $data['username']);
+
+						$messenger->anti_abuse_headers($config, $user);
+
 						$messenger->assign_vars(array(
-							'FAX_INFO'		=> $config['coppa_fax'],
-							'MAIL_INFO'		=> $config['coppa_mail'],
-							'EMAIL_ADDRESS'	=> $data['email'])
+							'WELCOME_MSG'	=> html_entity_decode(sprintf($user->lang['WELCOME_SUBJECT'], $config['sitename']), ENT_COMPAT),
+							'USERNAME'		=> html_entity_decode($data['username'], ENT_COMPAT),
+							'PASSWORD'		=> html_entity_decode($data['new_password'], ENT_COMPAT),
+							'U_ACTIVATE'	=> "$server_url/ucp.$phpEx?mode=activate&u=$user_id&k=$user_actkey")
 						);
+
+						if ($coppa)
+						{
+							$messenger->assign_vars(array(
+								'FAX_INFO'		=> $config['coppa_fax'],
+								'MAIL_INFO'		=> $config['coppa_mail'],
+								'EMAIL_ADDRESS'	=> $data['email'])
+							);
+						}
+
+						/**
+						* Modify messenger data before welcome mail is sent
+						*
+						* @event core.ucp_register_welcome_email_before
+						* @var	array		user_row	Array with user registration data
+						* @var	array		cp_data		Array with custom profile fields data
+						* @var	array		data		Array with current ucp registration data
+						* @var	string		message		Message to be displayed to the user after registration
+						* @var	string		server_url	Server URL
+						* @var	int			user_id		New user ID
+						* @var	string		user_actkey	User activation key
+						* @var	messenger	messenger	phpBB Messenger
+						* @since 3.2.4-RC1
+						*/
+						$vars = array(
+							'user_row',
+							'cp_data',
+							'data',
+							'message',
+							'server_url',
+							'user_id',
+							'user_actkey',
+							'messenger',
+						);
+						extract($phpbb_dispatcher->trigger_event('core.ucp_register_welcome_email_before', compact($vars)));
+
+						$messenger->send(NOTIFY_EMAIL);
+					}
+
+					if ($config['require_activation'] == USER_ACTIVATION_ADMIN)
+					{
+						/* @var $phpbb_notifications \phpbb\notification\manager */
+						$phpbb_notifications = $phpbb_container->get('notification_manager');
+						$phpbb_notifications->add_notifications('notification.type.admin_activate_user', array(
+							'user_id'		=> $user_id,
+							'user_actkey'	=> $user_row['user_actkey'],
+							'user_regdate'	=> $user_row['user_regdate'],
+						));
+					}
+
+					// Perform account linking if necessary
+					if (!empty($login_link_data))
+					{
+						$login_link_data['user_id'] = $user_id;
+
+						$result = $auth_provider->link_account($login_link_data);
+
+						if ($result)
+						{
+							$message = $message . '<br /><br />' . $user->lang[$result];
+						}
 					}
 
 					/**
-					* Modify messenger data before welcome mail is sent
+					* Perform additional actions after user registration
 					*
-					* @event core.ucp_register_welcome_email_before
+					* @event core.ucp_register_register_after
 					* @var	array		user_row	Array with user registration data
 					* @var	array		cp_data		Array with custom profile fields data
 					* @var	array		data		Array with current ucp registration data
@@ -494,7 +563,6 @@ class ucp_register
 					* @var	string		server_url	Server URL
 					* @var	int			user_id		New user ID
 					* @var	string		user_actkey	User activation key
-					* @var	messenger	messenger	phpBB Messenger
 					* @since 3.2.4-RC1
 					*/
 					$vars = array(
@@ -505,63 +573,12 @@ class ucp_register
 						'server_url',
 						'user_id',
 						'user_actkey',
-						'messenger',
 					);
-					extract($phpbb_dispatcher->trigger_event('core.ucp_register_welcome_email_before', compact($vars)));
+					extract($phpbb_dispatcher->trigger_event('core.ucp_register_register_after', compact($vars)));
 
-					$messenger->send(NOTIFY_EMAIL);
+					$message = $message . '<br /><br />' . sprintf($user->lang['RETURN_INDEX'], '<a href="' . append_sid("{$phpbb_root_path}index.$phpEx") . '">', '</a>');
+					trigger_error($message);
 				}
-
-				if ($config['require_activation'] == USER_ACTIVATION_ADMIN)
-				{
-					/* @var $phpbb_notifications \phpbb\notification\manager */
-					$phpbb_notifications = $phpbb_container->get('notification_manager');
-					$phpbb_notifications->add_notifications('notification.type.admin_activate_user', array(
-						'user_id'		=> $user_id,
-						'user_actkey'	=> $user_row['user_actkey'],
-						'user_regdate'	=> $user_row['user_regdate'],
-					));
-				}
-
-				// Perform account linking if necessary
-				if (!empty($login_link_data))
-				{
-					$login_link_data['user_id'] = $user_id;
-
-					$result = $auth_provider->link_account($login_link_data);
-
-					if ($result)
-					{
-						$message = $message . '<br /><br />' . $user->lang[$result];
-					}
-				}
-
-				/**
-				* Perform additional actions after user registration
-				*
-				* @event core.ucp_register_register_after
-				* @var	array		user_row	Array with user registration data
-				* @var	array		cp_data		Array with custom profile fields data
-				* @var	array		data		Array with current ucp registration data
-				* @var	string		message		Message to be displayed to the user after registration
-				* @var	string		server_url	Server URL
-				* @var	int			user_id		New user ID
-				* @var	string		user_actkey	User activation key
-				* @since 3.2.4-RC1
-				*/
-				$vars = array(
-					'user_row',
-					'cp_data',
-					'data',
-					'message',
-					'server_url',
-					'user_id',
-					'user_actkey',
-				);
-				extract($phpbb_dispatcher->trigger_event('core.ucp_register_register_after', compact($vars)));
-
-				$message = $message . '<br /><br />' . sprintf($user->lang['RETURN_INDEX'], '<a href="' . append_sid("{$phpbb_root_path}index.$phpEx") . '">', '</a>');
-				trigger_error($message);
 			}
 		}
 
