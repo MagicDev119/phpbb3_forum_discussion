@@ -3997,7 +3997,7 @@ function page_header($page_title = '', $display_online_list = false, $item_id = 
 		$template->assign_var('S_FORM_TOKEN_LOGIN', '');
 	}
 
-	$bestSellingProducts = get_best_selling_products();
+	// $bestSellingProducts = get_best_selling_products();
 	
 	// The following assigns all _common_ variables that may be used at any point in a template.
 	$template->assign_vars(array(
@@ -4011,16 +4011,16 @@ function page_header($page_title = '', $display_online_list = false, $item_id = 
 		'TOTAL_USERS_ONLINE'			=> $l_online_users,
 		'LOGGED_IN_USER_LIST'			=> $online_userlist,
 		'RECORD_USERS'					=> $l_online_record,
-		'BEST_SELLING_PRODUCTS'	=> $bestSellingProducts[0],
-		'BEST_SELLING_PRODUCTS_1'	=> $bestSellingProducts[1],
-		'BEST_SELLING_PRODUCTS_2'	=> $bestSellingProducts[2],
-		'BEST_SELLING_PRODUCTS_3'	=> $bestSellingProducts[3],
-		'BEST_SELLING_PRODUCTS_4'	=> $bestSellingProducts[4],
-		'BEST_SELLING_PRODUCTS_5'	=> $bestSellingProducts[5],
-		'BEST_SELLING_PRODUCTS_6'	=> $bestSellingProducts[6],
-		'BEST_SELLING_PRODUCTS_7'	=> $bestSellingProducts[7],
-		'BEST_SELLING_PRODUCTS_8'	=> $bestSellingProducts[8],
-		'BEST_SELLING_PRODUCTS_9'	=> $bestSellingProducts[9],
+		// 'BEST_SELLING_PRODUCTS'	=> $bestSellingProducts[0],
+		// 'BEST_SELLING_PRODUCTS_1'	=> $bestSellingProducts[1],
+		// 'BEST_SELLING_PRODUCTS_2'	=> $bestSellingProducts[2],
+		// 'BEST_SELLING_PRODUCTS_3'	=> $bestSellingProducts[3],
+		// 'BEST_SELLING_PRODUCTS_4'	=> $bestSellingProducts[4],
+		// 'BEST_SELLING_PRODUCTS_5'	=> $bestSellingProducts[5],
+		// 'BEST_SELLING_PRODUCTS_6'	=> $bestSellingProducts[6],
+		// 'BEST_SELLING_PRODUCTS_7'	=> $bestSellingProducts[7],
+		// 'BEST_SELLING_PRODUCTS_8'	=> $bestSellingProducts[8],
+		// 'BEST_SELLING_PRODUCTS_9'	=> $bestSellingProducts[9],
 
 		'PRIVATE_MESSAGE_COUNT'			=> (!empty($user->data['user_unread_privmsg'])) ? $user->data['user_unread_privmsg'] : 0,
 		'CURRENT_USER_AVATAR'			=> phpbb_get_user_avatar($user->data),

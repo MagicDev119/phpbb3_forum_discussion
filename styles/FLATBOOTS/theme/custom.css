@@ -1185,6 +1185,10 @@ a:visited {
     font-size: 10px;
   }
 
+  #phpbb_announcement.phpbb_announcement div {
+    font-size: 9px;
+  }
+
   .flat-header .container {
     padding-right: 0px;
     padding-left: 0px;
@@ -1216,6 +1220,10 @@ a:visited {
   
   .flat-header P {
     font-size: 11px;
+  }
+
+  #phpbb_announcement.phpbb_announcement div {
+    font-size: 12px;
   }
 
   .owl-carousel .nav-button {
@@ -1263,6 +1271,10 @@ a:visited {
     font-size: 11px;
   }
 
+  #phpbb_announcement.phpbb_announcement div {
+    font-size: 14px;
+  }
+
   .owl-carousel .nav-button {
     top: 125px !important;
   }
@@ -1303,6 +1315,10 @@ a:visited {
   }
   .flat-header P {
     font-size: 19px;
+  }
+
+  #phpbb_announcement.phpbb_announcement div {
+    font-size: 13px;
   }
 
   .owl-carousel .nav-button {
@@ -1360,6 +1376,10 @@ a:visited {
     font-size: 23px;
   }
 
+  #phpbb_announcement.phpbb_announcement div {
+    font-size: 14px;
+  }
+
   .flat-header h1 {
     font-size: 34px;
   }
@@ -1401,6 +1421,10 @@ a:visited {
 
   .flat-header P {
     font-size: 28px;
+  }
+  
+  #phpbb_announcement.phpbb_announcement div {
+    font-size: 16px;
   }
   
   .wrapper-head {
@@ -1550,3 +1574,15 @@ a:visited {
   margin: 0px 0 50px;
   max-height: 60px;
 }
+
+/* announcement-style */
+#phpbb_announcement.phpbb_announcement {
+  background-color: #FFF;
+  border-radius: 0;
+  color: #222;
+}
+
+#phpbb_announcement.phpbb_announcement div {
+  line-height: initial;
+}
+/* announcement-style-end */
