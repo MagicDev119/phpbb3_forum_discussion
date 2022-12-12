@@ -19,9 +19,16 @@
 	
     <!-- EVENT forumlist_body_category_header_before -->
 	<!-- IF forumrow.S_IS_CAT or forumrow.S_FIRST_ROW or forumrow.S_NO_CAT -->
-	   <div class="panel panel-forum">
+	   <div class="panel panel-forum forum-list-body">
 	     <div class="panel-heading">
-		  <!-- IF forumrow.S_IS_CAT --><a href="{forumrow.U_VIEWFORUM}">{forumrow.FORUM_NAME}</a><!-- ELSEIF forumrow.S_IS_LINK -->{L_LINKS}<!-- ELSE -->{L_FORUM}<!-- ENDIF -->
+				<ul class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+					<li><a href="{U_INDEX}" aria-label="{L_INDEX}"><span class="icon fa fa-solid fa-megaphone fa-fw"></span></a></li>
+					<!-- EVENT overall_header_breadcrumbs_before -->
+					<li {$MICRODATA}><!-- IF forumrow.S_IS_CAT --><a
+						href="{forumrow.U_VIEWFORUM}">{forumrow.FORUM_NAME}</a><!-- ELSEIF forumrow.S_IS_LINK -->{L_LINKS}<!-- ELSE -->{L_FORUM}<!-- ENDIF -->
+					</li>
+					<!-- EVENT overall_header_breadcrumbs_after -->
+				</ul>
 		 </div>
 		 <div class="panel-inner">
 		<table class="footable table table-striped table-primary table-hover">

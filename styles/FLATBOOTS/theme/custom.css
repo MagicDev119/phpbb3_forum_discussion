@@ -1580,6 +1580,7 @@ a:visited {
   background-color: #FFF;
   border-radius: 0;
   color: #222;
+  margin-top: 0px;
 }
 
 #phpbb_announcement.phpbb_announcement div {
@@ -1624,5 +1625,21 @@ a:visited {
 
 .forum-list-body.panel-forum>.panel-heading li a:hover {
   color: #222;
+}
+
+.forum-list-body.panel-forum>.panel-heading li {
+  color: #222;
+}
+
+.forum-list-body.panel-forum>.panel-heading li:hover {
+  color: #222;
+}
+
+.breadcrumb-line {
+  margin-bottom: 0px;
+}
+
+#page-body {
+  margin: 10px 0;
 }
 /* announcement-style-end */
