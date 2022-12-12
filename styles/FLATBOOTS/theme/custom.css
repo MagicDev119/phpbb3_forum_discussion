@@ -1585,4 +1585,44 @@ a:visited {
 #phpbb_announcement.phpbb_announcement div {
   line-height: initial;
 }
+
+.breadcrumb {
+  background: #5ab218;
+}
+
+.breadcrumb li:first-child a {
+  border-radius: 0px;
+}
+
+.fa-megaphone:before {
+  content: "\f0a1";
+}
+
+.breadcrumb>li+li:before {
+  display: none;
+}
+
+.breadcrumb>li+li {
+  padding-left: 5px;
+}
+
+.forum-list-body .panel-heading {
+  padding: 0;
+}
+
+.forum-list-body.panel-forum>.panel-heading li:first-child a {
+  color: #747474;
+}
+
+.forum-list-body.panel-forum>.panel-heading li:first-child a:hover {
+  color: #747474;
+}
+
+.forum-list-body.panel-forum>.panel-heading li a {
+  color: #222;
+}
+
+.forum-list-body.panel-forum>.panel-heading li a:hover {
+  color: #222;
+}
 /* announcement-style-end */

@@ -332,19 +332,19 @@
 
 		
     <!-- EVENT header_breadcrumb_before -->
-	<div class="-line clearfix">
+	<div class="breadcrumb-line clearfix">
 		<ul class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
 		<!-- DEFINE $MICRODATA = ' itemtype="https://schema.org/ListItem" itemprop="itemListElement" itemscope' -->
         {% set navlink_position = 1 %}
 		<!-- IF U_SITE_HOME -->
-		   <li><a href="{U_SITE_HOME}" aria-label="{L_SITE_HOME}"><span class="icon fa fa-home"></span></a></li>
+		   <li><a href="{U_SITE_HOME}" aria-label="{L_SITE_HOME}"><span class="icon fa-solid fa-megaphone fa-fw"></span></a></li>
 		   <!-- EVENT overall_header_breadcrumbs_before -->
 		   <li {$MICRODATA}><a href="{U_SITE_HOME}" data-navbar-reference="home" itemprop="item"><span itemprop="name">{L_SITE_HOME}</span></a><meta itemprop="position" content="{{ navlink_position }}{% set navlink_position = navlink_position + 1 %}" /></li>
 		   <!-- EVENT overall_header_breadcrumbs_after --> 
 		<!-- ELSE -->
-		   <li><a href="{U_INDEX}" aria-label="{L_INDEX}"><span class="icon fa fa-home"></span></a></li>
+		   <li><a href="{U_INDEX}" aria-label="{L_INDEX}"><span class="icon fa fa-solid fa-megaphone fa-fw"></span></a></li>
 		   <!-- EVENT overall_header_breadcrumbs_before -->
-		   <li {$MICRODATA}><a href="{U_INDEX}" data-navbar-reference="index" itemprop="item"><span itemprop="name">{L_INDEX}</span></a><meta itemprop="position" content="{{ navlink_position }}{% set navlink_position = navlink_position + 1 %}" /></li>
+		   <li {$MICRODATA}><a href="{U_INDEX}" data-navbar-reference="index" itemprop="item"><span itemprop="name">Board Announcements</span></a><meta itemprop="position" content="{{ navlink_position }}{% set navlink_position = navlink_position + 1 %}" /></li>
 		   <!-- EVENT overall_header_breadcrumbs_after --> 
 		<!-- ENDIF -->
 

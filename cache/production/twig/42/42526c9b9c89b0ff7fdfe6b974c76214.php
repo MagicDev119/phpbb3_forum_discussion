@@ -689,7 +689,7 @@ class __TwigTemplate_d6a2b53468b1ea488a9c02f93a4e86f7 extends \Twig\Template
             echo ($context["U_SITE_HOME"] ?? null);
             echo "\" aria-label=\"";
             echo $this->extensions['phpbb\template\twig\extension']->lang("SITE_HOME");
-            echo "\"><span class=\"icon fa fa-home\"></span></a></li>
+            echo "\"><span class=\"icon fa-solid fa-megaphone fa-fw\"></span></a></li>
 \t\t   ";
             // line 341
             // line 342
@@ -713,7 +713,7 @@ class __TwigTemplate_d6a2b53468b1ea488a9c02f93a4e86f7 extends \Twig\Template
             echo ($context["U_INDEX"] ?? null);
             echo "\" aria-label=\"";
             echo $this->extensions['phpbb\template\twig\extension']->lang("INDEX");
-            echo "\"><span class=\"icon fa fa-home\"></span></a></li>
+            echo "\"><span class=\"icon fa fa-solid fa-megaphone fa-fw\"></span></a></li>
 \t\t   ";
             // line 346
             // line 347
@@ -721,9 +721,7 @@ class __TwigTemplate_d6a2b53468b1ea488a9c02f93a4e86f7 extends \Twig\Template
             echo twig_get_attribute($this->env, $this->source, ($context["definition"] ?? null), "MICRODATA", [], "any", false, false, false, 347);
             echo "><a href=\"";
             echo ($context["U_INDEX"] ?? null);
-            echo "\" data-navbar-reference=\"index\" itemprop=\"item\"><span itemprop=\"name\">";
-            echo $this->extensions['phpbb\template\twig\extension']->lang("INDEX");
-            echo "</span></a><meta itemprop=\"position\" content=\"";
+            echo "\" data-navbar-reference=\"index\" itemprop=\"item\"><span itemprop=\"name\">Board Announcements</span></a><meta itemprop=\"position\" content=\"";
             echo ($context["navlink_position"] ?? null);
             $context["navlink_position"] = (($context["navlink_position"] ?? null) + 1);
             echo "\" /></li>
@@ -826,7 +824,7 @@ class __TwigTemplate_d6a2b53468b1ea488a9c02f93a4e86f7 extends \Twig\Template
 
     public function getDebugInfo()
     {
-        return array (  815 => 379,  812 => 378,  803 => 375,  799 => 373,  797 => 372,  792 => 369,  791 => 368,  786 => 366,  776 => 358,  774 => 357,  770 => 355,  749 => 354,  746 => 353,  743 => 352,  739 => 351,  736 => 350,  732 => 348,  720 => 347,  719 => 346,  712 => 345,  708 => 343,  696 => 342,  695 => 341,  688 => 340,  685 => 339,  682 => 338,  679 => 337,  675 => 335,  674 => 334,  666 => 328,  662 => 326,  648 => 323,  635 => 321,  633 => 320,  631 => 319,  592 => 282,  581 => 274,  575 => 273,  570 => 270,  563 => 266,  557 => 265,  554 => 264,  552 => 263,  546 => 260,  540 => 259,  531 => 252,  527 => 251,  520 => 250,  516 => 249,  510 => 248,  499 => 240,  492 => 235,  485 => 231,  478 => 228,  476 => 227,  452 => 208,  441 => 200,  434 => 196,  430 => 195,  421 => 191,  416 => 189,  407 => 185,  400 => 181,  391 => 177,  384 => 173,  376 => 168,  367 => 162,  363 => 161,  344 => 147,  338 => 144,  329 => 138,  254 => 65,  253 => 64,  245 => 63,  239 => 60,  234 => 57,  233 => 56,  229 => 54,  228 => 53,  224 => 52,  218 => 49,  215 => 48,  214 => 47,  208 => 45,  206 => 44,  202 => 43,  196 => 40,  192 => 39,  187 => 36,  184 => 27,  178 => 25,  176 => 24,  173 => 23,  171 => 21,  154 => 20,  141 => 19,  130 => 18,  119 => 17,  108 => 16,  97 => 15,  86 => 14,  84 => 13,  66 => 12,  62 => 11,  59 => 10,  58 => 9,  54 => 8,  50 => 7,  40 => 2,  37 => 1,);
+        return array (  813 => 379,  810 => 378,  801 => 375,  797 => 373,  795 => 372,  790 => 369,  789 => 368,  784 => 366,  774 => 358,  772 => 357,  768 => 355,  747 => 354,  744 => 353,  741 => 352,  737 => 351,  734 => 350,  730 => 348,  720 => 347,  719 => 346,  712 => 345,  708 => 343,  696 => 342,  695 => 341,  688 => 340,  685 => 339,  682 => 338,  679 => 337,  675 => 335,  674 => 334,  666 => 328,  662 => 326,  648 => 323,  635 => 321,  633 => 320,  631 => 319,  592 => 282,  581 => 274,  575 => 273,  570 => 270,  563 => 266,  557 => 265,  554 => 264,  552 => 263,  546 => 260,  540 => 259,  531 => 252,  527 => 251,  520 => 250,  516 => 249,  510 => 248,  499 => 240,  492 => 235,  485 => 231,  478 => 228,  476 => 227,  452 => 208,  441 => 200,  434 => 196,  430 => 195,  421 => 191,  416 => 189,  407 => 185,  400 => 181,  391 => 177,  384 => 173,  376 => 168,  367 => 162,  363 => 161,  344 => 147,  338 => 144,  329 => 138,  254 => 65,  253 => 64,  245 => 63,  239 => 60,  234 => 57,  233 => 56,  229 => 54,  228 => 53,  224 => 52,  218 => 49,  215 => 48,  214 => 47,  208 => 45,  206 => 44,  202 => 43,  196 => 40,  192 => 39,  187 => 36,  184 => 27,  178 => 25,  176 => 24,  173 => 23,  171 => 21,  154 => 20,  141 => 19,  130 => 18,  119 => 17,  108 => 16,  97 => 15,  86 => 14,  84 => 13,  66 => 12,  62 => 11,  59 => 10,  58 => 9,  54 => 8,  50 => 7,  40 => 2,  37 => 1,);
     }
 
     public function getSourceContext()
