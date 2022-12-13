@@ -1612,11 +1612,11 @@ a:visited {
 }
 
 .forum-list-body.panel-forum>.panel-heading li:first-child a {
-  color: #747474;
+  color: #FFF;
 }
 
 .forum-list-body.panel-forum>.panel-heading li:first-child a:hover {
-  color: #747474;
+  color: #FFF;
 }
 
 .forum-list-body.panel-forum>.panel-heading li a {
@@ -1641,5 +1641,14 @@ a:visited {
 
 #page-body {
   margin: 10px 0;
+}
+
+.breadcrumb-line a:link,
+.breadcrumb-line a:visited {
+  color: #FFF;
+}
+
+.breadcrumb li:first-child a {
+  background: #222;
 }
 /* announcement-style-end */
